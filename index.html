@@ -118,6 +118,8 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .tl-cont{flex:1}
 .tl-title{font-weight:600;font-size:.95rem;color:var(--c-navy);margin-bottom:.2rem}
 .tl-desc{font-size:.85rem;color:var(--c-muted)}
+.tl-chair{font-size:.84rem;color:var(--c-muted);margin-top:.25rem;line-height:1.5}
+.tl-chair strong{color:var(--c-navy);font-weight:600}
 .badge-p{display:inline-block;padding:.15rem .6rem;border-radius:100px;font-size:.7rem;font-weight:600;letter-spacing:.03em;margin-left:.5rem;vertical-align:middle}
 .badge-parallel{background:rgba(26,109,255,.08);color:var(--c-blue)}
 .badge-break{background:rgba(245,158,11,.1);color:#b45309}
@@ -154,6 +156,13 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .m-name{font-weight:600;font-size:.95rem;color:var(--c-navy)}
 .m-title{font-size:.78rem;color:var(--c-accent);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .m-affil{font-size:.82rem;color:var(--c-muted);margin-top:.15rem}
+/* SPONSORS */
+.sponsor-section{background:var(--c-white)}
+.sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.5rem}
+.sponsor-card{min-height:150px;border-radius:var(--radius-sm);background:var(--c-white);border:1px solid var(--c-border);display:flex;align-items:center;justify-content:center;padding:2rem;overflow:hidden;transition:all .25s}
+.sponsor-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(15,43,91,.06);border-color:var(--c-blue)}
+.sponsor-card img{width:100%;max-width:360px;max-height:100px;object-fit:contain}
+.sponsor-card .logo-ceatdi{transform:scale(1.55)}
 /* FOOTER */
 .footer{background:var(--c-dark);color:rgba(255,255,255,.5);padding:3rem 0;text-align:center;font-size:.85rem}
 .footer a{color:var(--c-accent)}
@@ -192,6 +201,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <li><a href="#venue"><span class="en">Venue</span><span class="zh">场地</span></a></li>
     <li><a href="#accommodation"><span class="en">Accommodation</span><span class="zh">住宿</span></a></li>
     <li><a href="#committee"><span class="en">Committee</span><span class="zh">组委会</span></a></li>
+    <li><a href="#sponsors"><span class="en">Sponsors</span><span class="zh">赞助</span></a></li>
     <li><a href="https://www.eventbrite.com/e/1st-australia-china-biomedical-summit-tickets-1986173842429?aff=oddtdtcreator" class="nav-cta" target="_blank"><span class="en">Register Now</span><span class="zh">立即注册</span></a></li>
     <li><button class="lang-btn" id="langToggle" aria-label="Toggle language">中文</button></li>
   </ul>
@@ -277,9 +287,19 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
       <div class="tl-item brk"><div class="tl-time">10:40–11:10</div><div class="tl-cont"><div class="tl-title"><span class="badge-p badge-break"><span class="en">Group Photo &amp; Coffee Break</span><span class="zh">合影 &amp; 茶歇</span></span></div></div></div>
       <div class="tl-item ple"><div class="tl-time">11:10–12:30</div><div class="tl-cont"><div class="tl-title"><span class="en">Plenary Session 2</span><span class="zh">全体大会 2</span> <span class="badge-p badge-plenary">Plenary</span></div><div class="tl-desc"><span class="en">Showcasing Biomedical Excellence</span><span class="zh">展示生物医学卓越成果</span></div></div></div>
       <div class="tl-item brk"><div class="tl-time">12:30–13:30</div><div class="tl-cont"><div class="tl-title"><span class="badge-p badge-break"><span class="en">Lunch &amp; Networking</span><span class="zh">午餐 &amp; 交流</span></span></div></div></div>
-      <div class="tl-item"><div class="tl-time">13:30–15:00</div><div class="tl-cont"><div class="tl-title"><span class="en">Session 1: Infection &amp; One Health</span><span class="zh">分会 1：感染与同一健康</span> <span class="badge-p badge-parallel">Parallel</span></div><div class="tl-title" style="margin-top:.4rem"><span class="en">Session 2: Epidemiology &amp; Climate Change</span><span class="zh">分会 2：流行病学与气候变化</span> <span class="badge-p badge-parallel">Parallel</span></div></div></div>
+      <div class="tl-item"><div class="tl-time">13:30–15:00</div><div class="tl-cont">
+        <div class="tl-title"><span class="en">Session 1: Infection &amp; One Health</span><span class="zh">分会 1：感染与同一健康</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Jian Li &amp; Prof Youming Zhang</span><span class="zh"><strong>主席：</strong>Prof Jian Li &amp; Prof Youming Zhang</span></div>
+        <div class="tl-title" style="margin-top:.75rem"><span class="en">Session 2: Epidemiology &amp; Climate Change</span><span class="zh">分会 2：流行病学与气候变化</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Yuming Guo &amp; Prof Haidong Kan</span><span class="zh"><strong>主席：</strong>Prof Yuming Guo &amp; Prof Haidong Kan</span></div>
+      </div></div>
       <div class="tl-item brk"><div class="tl-time">15:00–15:30</div><div class="tl-cont"><div class="tl-title"><span class="badge-p badge-break"><span class="en">Break &amp; Networking</span><span class="zh">茶歇 &amp; 交流</span></span></div></div></div>
-      <div class="tl-item"><div class="tl-time">15:30–17:00</div><div class="tl-cont"><div class="tl-title"><span class="en">Session 1 (cont): Infection &amp; One Health</span><span class="zh">分会 1（续）：感染与同一健康</span> <span class="badge-p badge-parallel">Parallel</span></div><div class="tl-title" style="margin-top:.4rem"><span class="en">Session 2 (cont): Epidemiology &amp; Climate Change</span><span class="zh">分会 2（续）：流行病学与气候变化</span> <span class="badge-p badge-parallel">Parallel</span></div></div></div>
+      <div class="tl-item"><div class="tl-time">15:30–17:00</div><div class="tl-cont">
+        <div class="tl-title"><span class="en">Session 1 (cont): Infection &amp; One Health</span><span class="zh">分会 1（续）：感染与同一健康</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Jian Li &amp; Prof Youming Zhang</span><span class="zh"><strong>主席：</strong>Prof Jian Li &amp; Prof Youming Zhang</span></div>
+        <div class="tl-title" style="margin-top:.75rem"><span class="en">Session 2 (cont): Epidemiology &amp; Climate Change</span><span class="zh">分会 2（续）：流行病学与气候变化</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Yuming Guo &amp; Prof Haidong Kan</span><span class="zh"><strong>主席：</strong>Prof Yuming Guo &amp; Prof Haidong Kan</span></div>
+      </div></div>
       <div class="tl-item ple"><div class="tl-time">19:00</div><div class="tl-cont"><div class="tl-title"><span class="en">Conference Dinner</span><span class="zh">会议晚宴</span> <span class="badge-p badge-plenary">Social</span></div></div></div>
     </div>
   </div>
@@ -287,20 +307,30 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
   <div class="day-content" id="day2" data-anim>
     <div class="day-date"><span class="en">Tuesday, 6 October 2026</span><span class="zh">2026年10月6日（星期二）</span></div>
     <div class="timeline">
-      <div class="tl-item"><div class="tl-time">09:00–10:30</div><div class="tl-cont"><div class="tl-title"><span class="en">Session 3: Immunity &amp; Cancer</span><span class="zh">分会 3：免疫与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div><div class="tl-title" style="margin-top:.4rem"><span class="en">Session 4: Biomedical Engineering &amp; Drug Discovery</span><span class="zh">分会 4：生物医学工程与药物研发</span> <span class="badge-p badge-parallel">Parallel</span></div></div></div>
+      <div class="tl-item"><div class="tl-time">09:00–10:30</div><div class="tl-cont">
+        <div class="tl-title"><span class="en">Session 3: Immunity &amp; Cancer</span><span class="zh">分会 3：免疫与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Di Yu &amp; Prof Chen Dong</span><span class="zh"><strong>主席：</strong>Prof Di Yu &amp; Prof Chen Dong</span></div>
+        <div class="tl-title" style="margin-top:.75rem"><span class="en">Session 4: Biomedical Engineering &amp; Drug Discovery</span><span class="zh">分会 4：生物医学工程与药物研发</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Dayong Jin &amp; Prof Peng Xi</span><span class="zh"><strong>主席：</strong>Prof Dayong Jin &amp; Prof Peng Xi</span></div>
+      </div></div>
       <div class="tl-item brk"><div class="tl-time">10:30–11:00</div><div class="tl-cont"><div class="tl-title"><span class="badge-p badge-break"><span class="en">Coffee Break &amp; Networking</span><span class="zh">茶歇 &amp; 交流</span></span></div></div></div>
-      <div class="tl-item"><div class="tl-time">11:00–12:30</div><div class="tl-cont"><div class="tl-title"><span class="en">Session 3 (cont): Immunity &amp; Cancer</span><span class="zh">分会 3（续）：免疫与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div><div class="tl-title" style="margin-top:.4rem"><span class="en">Session 4 (cont): Biomedical Engineering &amp; Drug Discovery</span><span class="zh">分会 4（续）：生物医学工程与药物研发</span> <span class="badge-p badge-parallel">Parallel</span></div></div></div>
+      <div class="tl-item"><div class="tl-time">11:00–12:30</div><div class="tl-cont">
+        <div class="tl-title"><span class="en">Session 3 (cont): Immunity &amp; Cancer</span><span class="zh">分会 3（续）：免疫与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Di Yu &amp; Prof Chen Dong</span><span class="zh"><strong>主席：</strong>Prof Di Yu &amp; Prof Chen Dong</span></div>
+        <div class="tl-title" style="margin-top:.75rem"><span class="en">Session 4 (cont): Biomedical Engineering &amp; Drug Discovery</span><span class="zh">分会 4（续）：生物医学工程与药物研发</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Dayong Jin &amp; Prof Peng Xi</span><span class="zh"><strong>主席：</strong>Prof Dayong Jin &amp; Prof Peng Xi</span></div>
+      </div></div>
       <div class="tl-item brk"><div class="tl-time">12:30–13:30</div><div class="tl-cont"><div class="tl-title"><span class="badge-p badge-break"><span class="en">Lunch Break &amp; Networking</span><span class="zh">午餐 &amp; 交流</span></span></div></div></div>
-      <div class="tl-item"><div class="tl-time">13:30–15:40</div><div class="tl-cont"><div class="tl-title"><span class="en">Session 5: Computational Biology &amp; Artificial Intelligence</span><span class="zh">分会 5：计算生物学与人工智能</span></div></div></div>
+      <div class="tl-item"><div class="tl-time">13:30–15:40</div><div class="tl-cont"><div class="tl-title"><span class="en">Session 5: Computational Biology &amp; Artificial Intelligence</span><span class="zh">分会 5：计算生物学与人工智能</span></div><div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Jiangning Song &amp; Prof Xuegong Zhang</span><span class="zh"><strong>主席：</strong>Prof Jiangning Song &amp; Prof Xuegong Zhang</span></div></div></div>
       <div class="tl-item brk"><div class="tl-time">15:40–16:00</div><div class="tl-cont"><div class="tl-title"><span class="badge-p badge-break"><span class="en">Coffee Break &amp; Networking</span><span class="zh">茶歇 &amp; 交流</span></span></div></div></div>
-      <div class="tl-item ple"><div class="tl-time">16:00–17:30</div><div class="tl-cont"><div class="tl-title"><span class="en">Roundtable Discussion</span><span class="zh">圆桌讨论</span> <span class="badge-p badge-plenary">Plenary</span></div><div class="tl-desc"><span class="en">Shaping the Future of Australia–China Biomedical Innovation</span><span class="zh">塑造澳中生物医学创新的未来</span></div></div></div>
+      <div class="tl-item ple"><div class="tl-time">16:00–17:30</div><div class="tl-cont"><div class="tl-title"><span class="en">Roundtable Discussion</span><span class="zh">圆桌讨论</span> <span class="badge-p badge-plenary">Plenary</span></div><div class="tl-chair"><span class="en"><strong>Chairs:</strong> To be confirmed</span><span class="zh"><strong>主席：</strong>待确认</span></div><div class="tl-desc"><span class="en">Shaping the Future of Australia–China Biomedical Innovation</span><span class="zh">塑造澳中生物医学创新的未来</span></div></div></div>
     </div>
   </div>
   <!-- DAY 3 -->
   <div class="day-content" id="day3" data-anim>
     <div class="day-date"><span class="en">Wednesday, 7 October 2026</span><span class="zh">2026年10月7日（星期三）</span></div>
     <div class="timeline">
-      <div class="tl-item ple"><div class="tl-time">09:00–17:00</div><div class="tl-cont"><div class="tl-title"><span class="en">Multiple-site Thematic Meetings</span><span class="zh">多站点主题会议</span> <span class="badge-p badge-plenary">Full Day</span></div><div class="tl-desc"><span class="en">Site visits and thematic meetings across multiple locations in Melbourne</span><span class="zh">在墨尔本多个地点进行实地考察与主题研讨</span></div></div></div>
+      <div class="tl-item ple"><div class="tl-time">09:00–17:00</div><div class="tl-cont"><div class="tl-title"><span class="en">Off-site Theme Meetings</span><span class="zh">场外主题会议</span> <span class="badge-p badge-plenary">Full Day</span></div><div class="tl-desc"><span class="en">Site visits and theme meetings across multiple locations in Melbourne</span><span class="zh">在墨尔本多个地点进行实地考察与主题研讨</span></div></div></div>
     </div>
   </div>
 </div>
@@ -389,6 +419,20 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
       <div class="com-member"><div class="m-avatar">YL</div><div><div class="m-name">Dr Yuxi Li</div><div class="m-affil">The University of Melbourne</div></div></div>
       <div class="com-member"><div class="m-avatar">ZK</div><div><div class="m-name">Dr Zhi Ying Kho</div><div class="m-affil">Monash University</div></div></div>
     </div>
+  </div>
+</div>
+</section>
+
+<!-- SPONSORS -->
+<section class="section sponsor-section" id="sponsors">
+<div class="container">
+  <div data-anim>
+    <div class="section-label"><span class="en">Sponsors</span><span class="zh">赞助支持</span></div>
+    <div class="section-title"><span class="en">Sponsors</span><span class="zh">赞助单位</span></div>
+  </div>
+  <div class="sponsor-grid" data-anim>
+    <div class="sponsor-card"><img class="logo-ceatdi" src="images/ceatdi-logo.jpg" alt="CEATDI logo" loading="lazy"></div>
+    <div class="sponsor-card"><img src="images/nanoinsights-logo.jpg" alt="NanoInsights logo" loading="lazy"></div>
   </div>
 </div>
 </section>
