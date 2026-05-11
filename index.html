@@ -163,6 +163,11 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .sponsor-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(15,43,91,.06);border-color:var(--c-blue)}
 .sponsor-card img{width:100%;max-width:360px;max-height:100px;object-fit:contain}
 .sponsor-card .logo-ceatdi{transform:scale(1.55)}
+/* VISA */
+.visa-section{background:linear-gradient(180deg,var(--c-bg) 0%,#eef2ff 100%)}
+.visa-card{margin-top:2.5rem;padding:2.5rem;border-radius:var(--radius);background:var(--c-white);border:1px solid var(--c-border);box-shadow:0 4px 24px rgba(15,43,91,.04);max-width:760px}
+.visa-card p{font-size:1.05rem;line-height:1.85;color:var(--c-text);margin-bottom:1.5rem}
+.visa-card .btn{font-size:.9rem;padding:.75rem 1.6rem}
 /* FOOTER */
 .footer{background:var(--c-dark);color:rgba(255,255,255,.5);padding:3rem 0;text-align:center;font-size:.85rem}
 .footer a{color:var(--c-accent)}
@@ -204,6 +209,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <li><a href="#accommodation"><span class="en">Accommodation</span><span class="zh">住宿</span></a></li>
     <li><a href="#committee"><span class="en">Committee</span><span class="zh">组委会</span></a></li>
     <li><a href="#sponsors"><span class="en">Sponsors</span><span class="zh">赞助</span></a></li>
+    <li><a href="#visa"><span class="en">Invitation Letter</span><span class="zh">邀请函</span></a></li>
     <li><a href="https://www.eventbrite.com/e/1st-australia-china-biomedical-summit-tickets-1986173842429?aff=oddtdtcreator" class="nav-cta" target="_blank"><span class="en">Register Now</span><span class="zh">立即注册</span></a></li>
     <li><button class="lang-btn" id="langToggle" aria-label="Toggle language">中文</button></li>
   </ul>
@@ -248,12 +254,12 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
   </div>
   <div class="about-grid">
     <div class="about-text" data-anim>
-      <p class="en">This summit aims to strengthen strategic collaboration between Australia and China in biomedical sciences by bringing together <strong>national academy fellows, leading investigators, and senior research leaders</strong> to shape future research directions. The program will focus on key areas, including Infection and One Health, Immunity and Cancer, Biomedical Engineering and Drug Discovery, Epidemiology and Climate Change, and Artificial Intelligence in Biomedicine. As the inaugural biomedical summit, it will foster <strong>interdisciplinary dialogue</strong> and promote long-term collaboration between Australia and China.</p>
-      <p class="zh">本次峰会旨在通过汇集<strong>国家级院士、顶尖研究员和资深研究领导者</strong>，加强澳大利亚与中国在生物医学科学领域的战略合作，共同塑造未来研究方向。会议议程将聚焦以下关键领域：感染与同一健康、免疫与肿瘤、生物医学工程与药物研发、流行病学与气候变化，以及生物医学中的人工智能。作为首届生物医学峰会，它将促进<strong>跨学科对话</strong>，推动澳中之间的长期合作。</p>
+      <p class="en">This summit aims to strengthen strategic collaboration between Australia and China in biomedical sciences by bringing together <strong>national academy fellows, leading investigators, and senior research leaders</strong> to shape future research directions. The program will focus on key areas, including Infection and One Health, Immunity, Inflammation and Cancer, Biomedical Engineering and Drug Discovery, Epidemiology and Climate Change, and Artificial Intelligence in Biomedicine. As the inaugural biomedical summit, it will foster <strong>interdisciplinary dialogue</strong> and promote long-term collaboration between Australia and China.</p>
+      <p class="zh">本次峰会旨在通过汇集<strong>国家级院士、顶尖研究员和资深研究领导者</strong>，加强澳大利亚与中国在生物医学科学领域的战略合作，共同塑造未来研究方向。会议议程将聚焦以下关键领域：感染与同一健康、免疫、炎症与肿瘤、生物医学工程与药物研发、流行病学与气候变化，以及生物医学中的人工智能。作为首届生物医学峰会，它将促进<strong>跨学科对话</strong>，推动澳中之间的长期合作。</p>
     </div>
     <div class="topics-list" data-anim>
       <div class="topic-item"><div class="topic-num">01</div><h4><span class="en">Infection &amp; One Health</span><span class="zh">感染与同一健康</span></h4></div>
-      <div class="topic-item"><div class="topic-num">02</div><h4><span class="en">Immunity &amp; Cancer</span><span class="zh">免疫与肿瘤</span></h4></div>
+      <div class="topic-item"><div class="topic-num">02</div><h4><span class="en">Immunity, Inflammation &amp; Cancer</span><span class="zh">免疫、炎症与肿瘤</span></h4></div>
       <div class="topic-item"><div class="topic-num">03</div><h4><span class="en">Biomedical Engineering &amp; Drug Discovery</span><span class="zh">生物医学工程与药物研发</span></h4></div>
       <div class="topic-item"><div class="topic-num">04</div><h4><span class="en">Epidemiology &amp; Climate Change</span><span class="zh">流行病学与气候变化</span></h4></div>
       <div class="topic-item"><div class="topic-num">05</div><h4><span class="en">Artificial Intelligence in Biomedicine</span><span class="zh">生物医学中的人工智能</span></h4></div>
@@ -310,15 +316,15 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <div class="day-date"><span class="en">Tuesday, 6 October 2026</span><span class="zh">2026年10月6日（星期二）</span></div>
     <div class="timeline">
       <div class="tl-item"><div class="tl-time">09:00–10:30</div><div class="tl-cont">
-        <div class="tl-title"><span class="en">Session 3: Immunity &amp; Cancer</span><span class="zh">分会 3：免疫与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div>
-        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Di Yu &amp; Prof Chen Dong</span><span class="zh"><strong>主席：</strong>Prof Di Yu &amp; Prof Chen Dong</span></div>
+        <div class="tl-title"><span class="en">Session 3: Immunity, Inflammation &amp; Cancer</span><span class="zh">分会 3：免疫、炎症与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Di Yu &amp; Prof Zheng Liu</span><span class="zh"><strong>主席：</strong>Prof Di Yu &amp; Prof Zheng Liu</span></div>
         <div class="tl-title" style="margin-top:.75rem"><span class="en">Session 4: Biomedical Engineering &amp; Drug Discovery</span><span class="zh">分会 4：生物医学工程与药物研发</span> <span class="badge-p badge-parallel">Parallel</span></div>
         <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Dayong Jin &amp; Prof Peng Xi</span><span class="zh"><strong>主席：</strong>Prof Dayong Jin &amp; Prof Peng Xi</span></div>
       </div></div>
       <div class="tl-item brk"><div class="tl-time">10:30–11:00</div><div class="tl-cont"><div class="tl-title"><span class="badge-p badge-break"><span class="en">Coffee Break &amp; Networking</span><span class="zh">茶歇 &amp; 交流</span></span></div></div></div>
       <div class="tl-item"><div class="tl-time">11:00–12:30</div><div class="tl-cont">
-        <div class="tl-title"><span class="en">Session 3 (cont): Immunity &amp; Cancer</span><span class="zh">分会 3（续）：免疫与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div>
-        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Di Yu &amp; Prof Chen Dong</span><span class="zh"><strong>主席：</strong>Prof Di Yu &amp; Prof Chen Dong</span></div>
+        <div class="tl-title"><span class="en">Session 3 (cont): Immunity, Inflammation &amp; Cancer</span><span class="zh">分会 3（续）：免疫、炎症与肿瘤</span> <span class="badge-p badge-parallel">Parallel</span></div>
+        <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Di Yu &amp; Prof Zheng Liu</span><span class="zh"><strong>主席：</strong>Prof Di Yu &amp; Prof Zheng Liu</span></div>
         <div class="tl-title" style="margin-top:.75rem"><span class="en">Session 4 (cont): Biomedical Engineering &amp; Drug Discovery</span><span class="zh">分会 4（续）：生物医学工程与药物研发</span> <span class="badge-p badge-parallel">Parallel</span></div>
         <div class="tl-chair"><span class="en"><strong>Chairs:</strong> Prof Dayong Jin &amp; Prof Peng Xi</span><span class="zh"><strong>主席：</strong>Prof Dayong Jin &amp; Prof Peng Xi</span></div>
       </div></div>
@@ -400,26 +406,20 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <div class="section-title"><span class="en">Organising Committee</span><span class="zh">组织委员会</span></div>
   </div>
   <div class="com-group" data-anim>
-    <div class="com-group-title"><span class="en">Organising Committee</span><span class="zh">组织委员会</span></div>
     <div class="com-grid">
       <div class="com-member"><div class="m-avatar chair">JL</div><div><div class="m-name">Prof Jian Li</div><div class="m-title">Chair · FAA, FAAM, FAHMS</div><div class="m-affil">Monash University</div></div></div>
+      <div class="com-member"><div class="m-avatar chair">CD</div><div><div class="m-name">Prof Chen Dong</div><div class="m-title">Co-Chair · CAS Member</div><div class="m-affil">Westlake University</div></div></div>
+      <div class="com-member"><div class="m-avatar">YZ</div><div><div class="m-name">Prof Youming Zhang</div><div class="m-title">CAE Foreign Member, acatech Member, MAE</div><div class="m-affil">Shandong University</div></div></div>
       <div class="com-member"><div class="m-avatar">DJ</div><div><div class="m-name">Prof Dayong Jin</div><div class="m-title">FTSE, FAIBME</div><div class="m-affil">University of Technology Sydney</div></div></div>
-      <div class="com-member"><div class="m-avatar">YG</div><div><div class="m-name">Prof Yuming Guo</div><div class="m-title">FTSE, FAHMS, FASSA</div><div class="m-affil">Monash University</div></div></div>
+      <div class="com-member"><div class="m-avatar">PX</div><div><div class="m-name">Prof Peng Xi</div><div class="m-affil">Peking University</div></div></div>
+      <div class="com-member"><div class="m-avatar">YG</div><div><div class="m-name">Prof Yuming Guo</div><div class="m-title">FTSE, FAHMS, FASSA, MAE, FEASA, FBAS</div><div class="m-affil">Monash University</div></div></div>
+      <div class="com-member"><div class="m-avatar">HK</div><div><div class="m-name">Prof Haidong Kan</div><div class="m-title">MAE</div><div class="m-affil">Fudan University</div></div></div>
       <div class="com-member"><div class="m-avatar">DY</div><div><div class="m-name">Prof Di Yu</div><div class="m-title">FAHMS</div><div class="m-affil">The University of Queensland</div></div></div>
+      <div class="com-member"><div class="m-avatar">ZL</div><div><div class="m-name">Prof Zheng Liu</div><div class="m-title">FAAAAI</div><div class="m-affil">Wuhan University</div></div></div>
       <div class="com-member"><div class="m-avatar">JS</div><div><div class="m-name">Prof Jiangning Song</div><div class="m-affil">Monash University</div></div></div>
+      <div class="com-member"><div class="m-avatar">XZ</div><div><div class="m-name">Prof Xuegong Zhang</div><div class="m-title">ISCB Fellow, IEEE Fellow, FAAIA</div><div class="m-affil">Tsinghua University</div></div></div>
       <div class="com-member"><div class="m-avatar">HQ</div><div><div class="m-name">Dr Helena Qin</div><div class="m-affil">Monash University</div></div></div>
       <div class="com-member"><div class="m-avatar">FZ</div><div><div class="m-name">Prof Fanfan Zhou</div><div class="m-affil">The University of Sydney</div></div></div>
-    </div>
-  </div>
-  <div class="com-group" data-anim>
-    <div class="com-group-title"><span class="en">ECR Committee</span><span class="zh">青年学者委员会</span></div>
-    <div class="com-grid">
-      <div class="com-member"><div class="m-avatar">LZ</div><div><div class="m-name">Dr Le (Leo) Zhang</div><div class="m-affil">University of Technology Sydney</div></div></div>
-      <div class="com-member"><div class="m-avatar">JZ</div><div><div class="m-name">Dr Jinxin (Jason) Zhao</div><div class="m-affil">Monash University</div></div></div>
-      <div class="com-member"><div class="m-avatar">ZC</div><div><div class="m-name">Dr Zhian (Anthony) Chen</div><div class="m-affil">The University of Queensland</div></div></div>
-      <div class="com-member"><div class="m-avatar">SH</div><div><div class="m-name">Dr Sifei Han</div><div class="m-affil">Monash University</div></div></div>
-      <div class="com-member"><div class="m-avatar">YL</div><div><div class="m-name">Dr Yuxi Li</div><div class="m-affil">The University of Melbourne</div></div></div>
-      <div class="com-member"><div class="m-avatar">ZK</div><div><div class="m-name">Dr Zhi Ying Kho</div><div class="m-affil">Monash University</div></div></div>
     </div>
   </div>
 </div>
@@ -433,8 +433,22 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <div class="section-title"><span class="en">Sponsors</span><span class="zh">赞助单位</span></div>
   </div>
   <div class="sponsor-grid" data-anim>
-    <div class="sponsor-card"><img class="logo-ceatdi" src="images/ceatdi-logo.jpg" alt="CEATDI logo" loading="lazy"></div>
     <div class="sponsor-card"><img src="images/nanoinsights-logo.jpg" alt="NanoInsights logo" loading="lazy"></div>
+    <div class="sponsor-card"><img class="logo-ceatdi" src="images/ceatdi-logo.jpg" alt="CEATDI logo" loading="lazy"></div>
+  </div>
+</div>
+</section>
+
+<!-- INVITATION LETTER & VISA -->
+<section class="section visa-section" id="visa">
+<div class="container">
+  <div data-anim>
+    <div class="section-label"><span class="en">Travel Support</span><span class="zh">出行支持</span></div>
+    <div class="section-title"><span class="en">Invitation Letter &amp; Visa</span><span class="zh">邀请函与签证</span></div>
+  </div>
+  <div class="visa-card" data-anim>
+    <p><span class="en">Please contact the Organising Committee if you require an official invitation letter to support your institutional travel approval and/or visa application.</span><span class="zh">如需正式邀请函以协助您所在机构的出行审批或签证申请，请联系组委会。</span></p>
+    <a class="btn btn-primary" href="mailto:caiw2026@163.com?subject=Invitation%20Letter%20Request%20-%20ACBS%202026"><span class="en">Contact Organising Committee →</span><span class="zh">联系组委会 →</span></a>
   </div>
 </div>
 </section>
