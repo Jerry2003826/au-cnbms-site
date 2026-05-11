@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAIW 2026 — China–Australia Innovation Week</title>
+<meta name="description" content="Global Industrial Technology Innovation Conference 2026 & China–Australia Innovation Week. 2 June 2026, Shanghai, Jiangsu, and Anhui, China.">
+<link rel="canonical" href="https://au-cnbms.net/">
+<meta property="og:url" content="https://au-cnbms.net/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CAIW 2026 — China–Australia Innovation Week">
+<meta property="og:description" content="Global Industrial Technology Innovation Conference 2026 & China–Australia Innovation Week. 2 June 2026, Shanghai, Jiangsu, and Anhui, China.">
+<meta property="og:image" content="https://au-cnbms.net/images/hero-white-1.jpg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CAIW 2026 — China–Australia Innovation Week">
+<meta name="twitter:description" content="Global Industrial Technology Innovation Conference 2026 & China–Australia Innovation Week. 2 June 2026, Shanghai, Jiangsu, and Anhui, China.">
+<meta name="twitter:image" content="https://au-cnbms.net/images/hero-white-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --c-bg:#fafbff;
+  --c-dark:#0a1628;
+  --c-navy:#0f2b5b;
+  --c-blue:#1a6dff;
+  --c-blue-light:#e8f0ff;
+  --c-accent:#f59e0b;
+  --c-text:#334155;
+  --c-muted:#64748b;
+  --c-white:#ffffff;
+  --c-border:rgba(15,43,91,.08);
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --font-display:'Playfair Display',Georgia,serif;
+  --max-w:1200px;
+  --section-py:clamp(4rem,8vw,7rem);
+  --radius:16px;
+  --radius-sm:10px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);color:var(--c-text);background:var(--c-bg);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max-w),92vw);margin-inline:auto}
+
+/* ─── NAV ─── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s,box-shadow .35s,backdrop-filter .35s}
+.nav.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(180%);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--c-white);letter-spacing:-.02em;transition:color .35s}
+.nav.scrolled .nav-logo{color:var(--c-navy)}
+.nav-links{display:flex;gap:2rem;align-items:center;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:500;color:rgba(255,255,255,.85);transition:color .25s;letter-spacing:.01em}
+.nav.scrolled .nav-links a{color:var(--c-text)}
+.nav-links a:hover{color:var(--c-accent)}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.5rem;background:var(--c-blue);color:var(--c-white)!important;border-radius:100px;font-weight:600;font-size:.875rem;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,109,255,.35)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--c-white);margin:5px 0;border-radius:2px;transition:background .3s}
+.nav.scrolled .nav-toggle span{background:var(--c-navy)}
+
+/* ─── HERO ─── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#0a1628 0%,#0f2b5b 40%,#1a4a8a 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url('images/hero-white-1.jpg') center/cover no-repeat;opacity:.12;mix-blend-mode:luminosity}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(26,109,255,.2),transparent 70%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:8rem 1rem 5rem}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1.2rem;border-radius:100px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);backdrop-filter:blur(8px);color:rgba(255,255,255,.9);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2rem}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--c-accent);animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5.5vw,4.2rem);font-weight:600;color:var(--c-white);line-height:1.15;max-width:900px;margin-inline:auto;letter-spacing:-.02em}
+.hero h1 span{background:linear-gradient(135deg,var(--c-accent),#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;align-items:center;color:rgba(255,255,255,.7);font-size:1.05rem}
+.hero-sub svg{width:18px;height:18px;opacity:.6;flex-shrink:0}
+.hero-sub .item{display:flex;align-items:center;gap:.5rem}
+.hero-actions{margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:100px;font-weight:600;font-size:.95rem;transition:all .25s;cursor:pointer;border:none}
+.btn-primary{background:var(--c-blue);color:var(--c-white);box-shadow:0 4px 15px rgba(26,109,255,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(26,109,255,.4)}
+.btn-outline{background:transparent;color:var(--c-white);border:1.5px solid rgba(255,255,255,.25)}
+.btn-outline:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06)}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.4);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+.hero-scroll .line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent)}
+
+/* ─── SECTIONS ─── */
+.section{padding:var(--section-py) 0}
+.section-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--c-blue);margin-bottom:1rem}
+.section-label::before{content:'';width:24px;height:2px;background:var(--c-blue);border-radius:2px}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600;color:var(--c-navy);line-height:1.2;letter-spacing:-.02em}
+.section-desc{max-width:680px;margin-top:1rem;font-size:1.05rem;color:var(--c-muted);line-height:1.8}
+
+/* ─── ABOUT ─── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.about-text p{margin-bottom:1.2rem;font-size:1.02rem;line-height:1.85}
+.about-text strong{color:var(--c-navy)}
+.about-cards{display:flex;flex-direction:column;gap:1.25rem}
+.about-card{padding:1.5rem;border-radius:var(--radius);background:var(--c-white);border:1px solid var(--c-border);transition:transform .25s,box-shadow .25s}
+.about-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(15,43,91,.06)}
+.about-card h4{font-size:1rem;font-weight:600;color:var(--c-navy);margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.about-card h4 .icon{width:32px;height:32px;border-radius:8px;background:var(--c-blue-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.about-card h4 .icon svg{width:16px;height:16px;color:var(--c-blue)}
+.about-card ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.about-card li{font-size:.9rem;color:var(--c-muted);padding-left:1rem;position:relative}
+.about-card li::before{content:'';position:absolute;left:0;top:.6em;width:4px;height:4px;border-radius:50%;background:var(--c-blue);opacity:.5}
+
+/* ─── OBJECTIVES / OUTCOMES ─── */
+.two-col{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.obj-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.obj-list li{display:flex;gap:1rem;align-items:flex-start;font-size:.98rem;line-height:1.7}
+.obj-list .num{flex-shrink:0;width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--c-blue),#3b82f6);color:var(--c-white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.obj-list strong{color:var(--c-navy)}
+
+/* ─── ACTIVITIES ─── */
+.bg-navy{background:var(--c-dark);color:rgba(255,255,255,.85)}
+.bg-navy .section-label{color:var(--c-accent)}
+.bg-navy .section-label::before{background:var(--c-accent)}
+.bg-navy .section-title{color:var(--c-white)}
+.activities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;margin-top:3rem}
+.activity-card{padding:1.8rem;border-radius:var(--radius);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:all .3s}
+.activity-card:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);transform:translateY(-2px)}
+.activity-card .tag{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--c-accent);margin-bottom:.75rem}
+.activity-card h3{font-family:var(--font-display);font-size:1.15rem;color:var(--c-white);margin-bottom:.75rem;font-weight:500}
+.activity-card p,.activity-card li{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7}
+.activity-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.5rem}
+.activity-card li::before{content:'→ ';color:var(--c-accent);opacity:.7}
+
+/* ─── SCHEDULE ─── */
+.schedule-table{width:100%;margin-top:2.5rem;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:var(--radius);border:1px solid var(--c-border);background:var(--c-white)}
+.schedule-table thead{background:var(--c-navy)}
+.schedule-table th{padding:1rem 1.5rem;text-align:left;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+.schedule-table td{padding:1rem 1.5rem;font-size:.95rem;border-bottom:1px solid var(--c-border)}
+.schedule-table tr:last-child td{border-bottom:none}
+.schedule-table tbody tr{transition:background .2s}
+.schedule-table tbody tr:hover{background:var(--c-blue-light)}
+.schedule-table .date{font-weight:600;color:var(--c-navy);white-space:nowrap}
+
+/* ─── FORUM ─── */
+.forum-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
+.forum-col h3{font-family:var(--font-display);font-size:1.2rem;color:var(--c-navy);margin-bottom:1rem;font-weight:600}
+.forum-item{padding:1rem 1.25rem;border-radius:var(--radius-sm);background:var(--c-white);border:1px solid var(--c-border);margin-bottom:.75rem;font-size:.95rem;color:var(--c-text);transition:border-color .2s,box-shadow .2s;cursor:default}
+.forum-item:hover{border-color:var(--c-blue);box-shadow:0 2px 12px rgba(26,109,255,.08)}
+
+/* ─── SPEAKERS ─── */
+.speakers-section{background:linear-gradient(180deg,var(--c-bg) 0%,#eef2ff 100%)}
+.speaker-group{margin-top:3rem}
+.speaker-group-title{font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--c-navy);margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.speakers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.5rem}
+.speaker{text-align:center;transition:transform .3s}
+.speaker:hover{transform:translateY(-4px)}
+.speaker-img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;border:3px solid var(--c-white);box-shadow:0 4px 20px rgba(15,43,91,.1);transition:box-shadow .3s}
+.speaker:hover .speaker-img{box-shadow:0 8px 30px rgba(26,109,255,.2)}
+.speaker-name{font-weight:600;font-size:.95rem;color:var(--c-navy)}
+.speaker-affiliation{font-size:.8rem;color:var(--c-muted);margin-top:.25rem}
+
+/* ─── ABSTRACT ─── */
+.abstract-section{background:linear-gradient(135deg,#0f2b5b,#1a4a8a);color:var(--c-white);position:relative;overflow:hidden}
+.abstract-section::before{content:'';position:absolute;top:-50%;right:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.15),transparent 70%)}
+.abstract-inner{position:relative;z-index:1;max-width:720px}
+.abstract-inner p{color:rgba(255,255,255,.75);margin-bottom:1rem;font-size:1rem;line-height:1.8}
+.abstract-inner strong{color:var(--c-white)}
+.abstract-inner .email{color:var(--c-accent);font-weight:600}
+.btn-accent{background:var(--c-accent);color:var(--c-dark);font-weight:700}
+.btn-accent:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(245,158,11,.35)}
+
+/* ─── ORGANISERS ─── */
+.org-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+.org-card{padding:2rem;border-radius:var(--radius);background:var(--c-white);border:1px solid var(--c-border)}
+.org-card h4{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--c-blue);margin-bottom:.75rem}
+.org-card ul{list-style:none}
+.org-card li{font-size:.92rem;color:var(--c-text);padding:.35rem 0;border-bottom:1px solid var(--c-border)}
+.org-card li:last-child{border-bottom:none}
+
+/* ─── FOOTER ─── */
+.footer{background:var(--c-dark);color:rgba(255,255,255,.5);padding:3rem 0;text-align:center;font-size:.85rem}
+.footer a{color:var(--c-accent)}
+
+/* ─── ANIMATE ─── */
+[data-anim]{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+[data-anim].visible{opacity:1;transform:translateY(0)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .about-grid,.two-col,.forum-grid,.org-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--c-white);padding:1.5rem;gap:0;box-shadow:0 8px 30px rgba(0,0,0,.1);border-radius:0 0 var(--radius) var(--radius)}
+  .nav-links.open{display:flex}
+  .nav-links a{color:var(--c-text)!important;padding:.75rem 0;border-bottom:1px solid var(--c-border)}
+  .nav-toggle{display:block}
+  .activities-grid{grid-template-columns:1fr}
+  .speakers-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .schedule-table{font-size:.85rem}
+  .schedule-table th,.schedule-table td{padding:.75rem 1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">CAIW 2026</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="https://www.eventbrite.com/e/chinaaustralia-innovation-week-2026-tickets-1984945674947?aff=oddtdtcreator" class="nav-cta" target="_blank">Register Now</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content" data-anim style="opacity:1;transform:none">
+    <div class="hero-badge"><span class="dot"></span> June 2026 · Shanghai, China</div>
+    <h1>Global Industrial Technology <span>Innovation</span> Conference 2026 &amp; China–Australia Innovation Week</h1>
+    <div class="hero-sub">
+      <div class="item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        2 June 2026
+      </div>
+      <div class="item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Shanghai, Jiangsu &amp; Anhui, China
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="https://www.eventbrite.com/e/chinaaustralia-innovation-week-2026-tickets-1984945674947?aff=oddtdtcreator" class="btn btn-primary" target="_blank">Register Now →</a>
+      <a href="#about" class="btn btn-outline">Learn More</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="line"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div data-anim>
+      <div class="section-label">About the Event</div>
+      <div class="section-title">Fostering Bilateral Innovation</div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text" data-anim>
+        <p>The <strong>China–Australia Innovation Week 2026</strong> is a strategic bilateral initiative designed to foster collaboration in <strong>innovation, higher education, and industry engagement</strong> between Australia and China.</p>
+        <p>The event will be hosted by the <strong>National Innovation Center par Excellence (NICE)</strong>, co-hosted by the <strong>Federation of Chinese Scholars in Australia (FOCSA)</strong>, with the support of the <strong>Australian Consulate-General in Shanghai</strong>.</p>
+        <p>Through a week-long series of forums, exhibitions, and field visits, the event will bring together representatives from universities, research institutions, startups, SMEs, industry partners, and investors to explore opportunities for collaboration and joint development.</p>
+      </div>
+      <div class="about-cards" data-anim>
+        <div class="about-card">
+          <h4>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/></svg></span>
+            Australia
+          </h4>
+          <ul>
+            <li>Federation of Chinese Scholars in Australia (FOCSA)</li>
+            <li>UNSW, Monash, University of Sydney, Wollongong &amp; others</li>
+            <li>Startups, SMEs, and innovation hubs</li>
+            <li>Austrade and state government offices</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h4>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M10 21V7l2-4 2 4v14"/></svg></span>
+            Yangtze River Delta (China)
+          </h4>
+          <ul>
+            <li>Universities and research institutes</li>
+            <li>Industrial enterprises and innovation parks</li>
+            <li>Investors and venture capital firms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIVES -->
+<section class="section" style="background:var(--c-blue-light)">
+  <div class="container">
+    <div class="two-col">
+      <div data-anim>
+        <div class="section-label">Goals</div>
+        <div class="section-title">Objectives</div>
+        <p class="section-desc">Bridging innovation ecosystems across two nations through education, research and enterprise.</p>
+      </div>
+      <ul class="obj-list" data-anim>
+        <li><span class="num">01</span><div><strong>Promote higher education collaboration</strong>, particularly in the co-cultivation of engineering and innovation talent.</div></li>
+        <li><span class="num">02</span><div><strong>Create a platform</strong> for knowledge exchange and joint training programs.</div></li>
+        <li><span class="num">03</span><div><strong>Identify and nurture innovative projects</strong> with potential mutual economic and societal benefits.</div></li>
+        <li><span class="num">04</span><div><strong>Facilitate investment and business partnerships</strong> between Chinese and Australian enterprises.</div></li>
+        <li><span class="num">05</span><div><strong>Enhance mutual understanding</strong> and strengthen cultural and academic ties between the two nations.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EXPECTED OUTCOMES -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div data-anim>
+        <div class="section-label">Impact</div>
+        <div class="section-title">Expected Outcomes</div>
+      </div>
+      <ul class="obj-list" data-anim>
+        <li><span class="num">01</span><div>Increased visibility of <strong>Australian higher education and innovation achievements</strong> in China.</div></li>
+        <li><span class="num">02</span><div>Successful <strong>matchmaking of academic, research, and business collaborations</strong> between the two countries.</div></li>
+        <li><span class="num">03</span><div>Enhanced understanding of <strong>each nation's innovation landscape and industrial capabilities</strong>.</div></li>
+        <li><span class="num">04</span><div>Identification of <strong>new investment, commercialization, and joint R&amp;D opportunities</strong>.</div></li>
+        <li><span class="num">05</span><div>Strengthened <strong>people-to-people and institutional linkages</strong> between China and Australia.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KEY ACTIVITIES -->
+<section class="section bg-navy" id="activities">
+  <div class="container">
+    <div data-anim>
+      <div class="section-label">Programme</div>
+      <div class="section-title">Key Activities</div>
+    </div>
+    <div class="activities-grid">
+      <div class="activity-card" data-anim>
+        <div class="tag">Ceremony</div>
+        <h3>Opening Ceremony</h3>
+        <p>A formal ceremony to inaugurate the Innovation Week, featuring keynote speeches from senior government officials, the Australian Consul-General in Shanghai, and representatives from NICE, universities, and industry.</p>
+      </div>
+      <div class="activity-card" data-anim>
+        <div class="tag">Launch</div>
+        <h3>Australian Innovation Corner</h3>
+        <p>The launch of a dedicated exhibition area within the NICE Innovation Hall to showcase Australia's research excellence, start-up innovation, and university-industry collaboration outcomes.</p>
+      </div>
+      <div class="activity-card" data-anim>
+        <div class="tag">Forum</div>
+        <h3>Main Forum</h3>
+        <ul>
+          <li>Sino–Australia Higher Education and Innovation Cooperation Forum</li>
+          <li>Technology Innovation Seminar</li>
+          <li>Technology Translation Workshop</li>
+        </ul>
+      </div>
+      <div class="activity-card" data-anim>
+        <div class="tag">Exhibition</div>
+        <h3>Innovation Showcase</h3>
+        <p>An exhibition highlighting breakthrough technologies, prototypes, and collaborative projects.</p>
+        <ul>
+          <li>Austrade &amp; NICE: SME–Industry Collaboration</li>
+          <li>Monash University &amp; Suzhou Industrial Park</li>
+          <li>UNSW &amp; Wuxi Industrial Research Institute</li>
+          <li>University of Sydney &amp; local industry partners</li>
+          <li>City of Melbourne &amp; Nanjing Pukou High-Tech Park</li>
+        </ul>
+      </div>
+      <div class="activity-card" data-anim>
+        <div class="tag">Visit</div>
+        <h3>Field Visits</h3>
+        <p>Field visits will be arranged for researchers to explore potential collaboration with local industry partners in Shanghai, Jiangsu and Anhui.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section" id="schedule">
+  <div class="container">
+    <div data-anim>
+      <div class="section-label">Timeline</div>
+      <div class="section-title">Proposed Programme Schedule</div>
+    </div>
+    <table class="schedule-table" data-anim>
+      <thead><tr><th>Date</th><th>Activity</th><th>Location / Focus</th></tr></thead>
+      <tbody>
+        <tr><td class="date">1 June 2026</td><td>Parallel Sessions</td><td>Shanghai</td></tr>
+        <tr><td class="date">2 June 2026</td><td>Main Forum</td><td>Shanghai</td></tr>
+        <tr><td class="date">3 June 2026</td><td>Parallel Sessions</td><td>Shanghai</td></tr>
+        <tr><td class="date">4–5 June 2026</td><td>Field Visits</td><td>Shanghai, Jiangsu and Anhui — visits to innovation parks, universities, and enterprises</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FORUM -->
+<section class="section" style="background:var(--c-blue-light)">
+  <div class="container">
+    <div data-anim>
+      <div class="section-label">Topics &amp; Organisers</div>
+      <div class="section-title">Forum Details</div>
+    </div>
+    <div class="forum-grid" data-anim>
+      <div class="forum-col">
+        <h3>Forum Topics</h3>
+        <div class="forum-item">Sustainability &amp; Decarbonisation</div>
+        <div class="forum-item">Renewable Energy Technology</div>
+        <div class="forum-item">Climate Resilient Infrastructure</div>
+        <div class="forum-item">Health &amp; Wellbeing</div>
+      </div>
+      <div class="forum-col">
+        <h3>Forum Organisers</h3>
+        <div class="forum-item">National Innovation Center par Excellence</div>
+        <div class="forum-item">Jiangsu Industrial Technology Research Institute</div>
+        <div class="forum-item">Federation of Chinese Scholars in Australia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section class="section speakers-section" id="speakers">
+  <div class="container">
+    <div data-anim>
+      <div class="section-label">People</div>
+      <div class="section-title">Our Distinguished Speakers &amp; Chairs</div>
+    </div>
+
+    <div class="speaker-group" data-anim>
+      <div class="speaker-group-title">Representative Speakers</div>
+      <div class="speakers-grid">
+        <div class="speaker"><img class="speaker-img" src="images/lei-jiang-1.jpg" alt="Prof. Lei Jiang"><div class="speaker-name">Prof. Lei Jiang</div><div class="speaker-affiliation">Chinese Academy of Sciences</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/MAG-Photo_UNSW-1-2.jpg" alt="Prof. Martin Green"><div class="speaker-name">Prof. Martin Green</div><div class="speaker-affiliation">University of New South Wales</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/Dongyuan-Zhao.jpg" alt="Prof. Dongyuan Zhao"><div class="speaker-name">Prof. Dongyuan Zhao</div><div class="speaker-affiliation">Fudan University</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/ana.jpg" alt="Prof. Ana Deletic"><div class="speaker-name">Prof. Ana Deletic</div><div class="speaker-affiliation">Queensland Uni. of Technology</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/robin.jpg" alt="Prof. Robin Batterham"><div class="speaker-name">Prof. Robin Batterham</div><div class="speaker-affiliation">University of Melbourne</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/mike.jpg" alt="Prof. Mike Hood"><div class="speaker-name">Prof. Mike Hood</div><div class="speaker-affiliation">University of Queensland</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/chennupati.jpg" alt="Prof. Chennupati Jagadish"><div class="speaker-name">Prof. Chennupati Jagadish</div><div class="speaker-affiliation">Australian National University</div></div>
+      </div>
+    </div>
+
+    <div class="speaker-group" data-anim>
+      <div class="speaker-group-title">Conference Chairs</div>
+      <div class="speakers-grid">
+        <div class="speaker"><img class="speaker-img" src="images/qing-liu.jpg" alt="Prof. Qing Liu"><div class="speaker-name">Prof. Qing Liu</div><div class="speaker-affiliation">National Innovation Center par Excellence</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/xiwang-zhang.jpg" alt="Prof. Xiwang Zhang"><div class="speaker-name">Prof. Xiwang Zhang</div><div class="speaker-affiliation">University of Queensland</div></div>
+      </div>
+    </div>
+
+    <div class="speaker-group" data-anim>
+      <div class="speaker-group-title">Session Chairs</div>
+      <div class="speakers-grid">
+        <div class="speaker"><img class="speaker-img" src="images/lianzhou-wang.jpg" alt="Prof. Lianzhou Wang"><div class="speaker-name">Prof. Lianzhou Wang</div><div class="speaker-affiliation">Hong Kong Polytechnic University</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/huanting-wang.jpg" alt="Prof. Huanting Wang"><div class="speaker-name">Prof. Huanting Wang</div><div class="speaker-affiliation">Monash University</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/guoxiu-wang.jpg" alt="Prof. Guoxiu Wang"><div class="speaker-name">Prof. Guoxiu Wang</div><div class="speaker-affiliation">University of Technology Sydney</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/dayong-jin.jpg" alt="Prof. Dayong Jin"><div class="speaker-name">Prof. Dayong Jin</div><div class="speaker-affiliation">Eastern Institute of Technology</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/ye-lin.jpg" alt="Prof. Lin Ye"><div class="speaker-name">Prof. Lin Ye</div><div class="speaker-affiliation">SUSTech</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/yuming-guo.jpg" alt="Prof. Yuming Guo"><div class="speaker-name">Prof. Yuming Guo</div><div class="speaker-affiliation">Monash University</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/baohua-jia.jpg" alt="Prof. Baohua Jia"><div class="speaker-name">Prof. Baohua Jia</div><div class="speaker-affiliation">RMIT</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/chuan-zhao.jpg" alt="Prof. Chuan Zhao"><div class="speaker-name">Prof. Chuan Zhao</div><div class="speaker-affiliation">University of New South Wales</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/jianhua-guo.jpg" alt="Prof. Jianhua Guo"><div class="speaker-name">Prof. Jianhua Guo</div><div class="speaker-affiliation">University of Queensland</div></div>
+        <div class="speaker"><img class="speaker-img" src="images/default.jpg" alt="Prof. Jian Li"><div class="speaker-name">Prof. Jian Li</div><div class="speaker-affiliation">Monash University</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABSTRACT SUBMISSION -->
+<section class="section abstract-section" id="abstract">
+  <div class="container">
+    <div class="abstract-inner" data-anim>
+      <div class="section-label" style="color:var(--c-accent)">Call for Abstracts</div>
+      <div class="section-title" style="color:var(--c-white)">Abstract Submission</div>
+      <p style="margin-top:1.5rem">Abstract submissions are invited for both oral and poster presentations. All abstracts must be submitted to <span class="email">caiw2026@163.com</span>. Notification of acceptance will be sent by e-mail to the presenting authors. All presenting authors of accepted abstracts are expected to register.</p>
+      <p>The abstract submission deadline is <strong>10/05/2026</strong>. Please also complete your conference registration at the time of abstract submission. We kindly encourage early submission to ensure sufficient time for review and processing.</p>
+      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="https://docs.qq.com/doc/DUEtVY1h2d29tbWdW" class="btn btn-accent" target="_blank">Download Abstract Template</a>
+        <a href="mailto:caiw2026@163.com" class="btn btn-outline">Email Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANISERS -->
+<section class="section">
+  <div class="container">
+    <div data-anim>
+      <div class="section-label">Organisation</div>
+      <div class="section-title">Implementation &amp; Coordination</div>
+    </div>
+    <div class="org-grid" data-anim>
+      <div class="org-card">
+        <h4>Lead Organisers</h4>
+        <ul>
+          <li>NICE / JITRI</li>
+          <li>Federation of Chinese Scholars in Australia (FOCSA)</li>
+        </ul>
+      </div>
+      <div class="org-card">
+        <h4>Supporting Partner</h4>
+        <ul><li>Australian Consulate-General in Shanghai</li></ul>
+      </div>
+      <div class="org-card">
+        <h4>Coordination Team</h4>
+        <ul><li>Joint working group from FOCSA, NICE, and selected partner universities for event logistics, program content, and stakeholder engagement.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 China–Australia Innovation Week. Contact: <a href="mailto:caiw2026@163.com">caiw2026@163.com</a></p>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+document.getElementById('navToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('[data-anim]').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
