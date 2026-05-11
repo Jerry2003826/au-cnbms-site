@@ -1,2 +1,12 @@
 # 本地整站镜像备份，不参与 GitHub Pages 发布（若需一并上传可删除此行）
 caiw2026-mirror/
+
+# 备份和临时文件
+*.bak
+*.zip
+Archive/
+__MACOSX/
+
+# 临时草稿文档（编辑参考用，不上传）
+*.docx
+*.xlsx
