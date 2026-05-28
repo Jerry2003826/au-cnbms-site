@@ -162,6 +162,11 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .sponsor-card{min-height:150px;border-radius:var(--radius-sm);background:var(--c-white);border:1px solid var(--c-border);display:flex;align-items:center;justify-content:center;padding:2rem;overflow:hidden;transition:all .25s}
 .sponsor-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(15,43,91,.06);border-color:var(--c-blue)}
 .sponsor-card img{width:100%;max-width:360px;max-height:100px;object-fit:contain}
+.supporter-section{background:linear-gradient(180deg,var(--c-bg) 0%,#eef2ff 100%)}
+.supporter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.5rem}
+.supporter-card{min-height:150px;border-radius:var(--radius-sm);background:var(--c-white);border:1px solid var(--c-border);display:flex;align-items:center;justify-content:center;padding:2rem;overflow:hidden;transition:all .25s}
+.supporter-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(15,43,91,.06);border-color:var(--c-blue)}
+.supporter-card img{width:100%;max-width:420px;max-height:120px;object-fit:contain}
 /* VISA */
 .visa-section{background:linear-gradient(180deg,var(--c-bg) 0%,#eef2ff 100%)}
 .visa-card{margin-top:2.5rem;padding:2.5rem;border-radius:var(--radius);background:var(--c-white);border:1px solid var(--c-border);box-shadow:0 4px 24px rgba(15,43,91,.04);max-width:760px}
@@ -209,6 +214,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <li><a href="#accommodation"><span class="en">Accommodation</span><span class="zh">住宿</span></a></li>
     <li><a href="#committee"><span class="en">Committee</span><span class="zh">组委会</span></a></li>
     <li><a href="#sponsors"><span class="en">Sponsors</span><span class="zh">赞助</span></a></li>
+    <li><a href="#supporters"><span class="en">Supporters</span><span class="zh">支持</span></a></li>
     <li><a href="#visa"><span class="en">Invitation Letter</span><span class="zh">邀请函</span></a></li>
     <li><a href="https://www.eventbrite.com/e/1st-australia-china-biomedical-summit-tickets-1986173842429?aff=oddtdtcreator" class="nav-cta" target="_blank"><span class="en">Register Now</span><span class="zh">立即注册</span></a></li>
     <li><button class="lang-btn" id="langToggle" aria-label="Toggle language">中文</button></li>
@@ -421,6 +427,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
       <div class="com-member"><div class="m-avatar">HQ</div><div><div class="m-name">Dr Helena Qin</div><div class="m-affil">Monash University</div></div></div>
       <div class="com-member"><div class="m-avatar">FZ</div><div><div class="m-name">Prof Fanfan Zhou</div><div class="m-affil">The University of Sydney</div></div></div>
       <div class="com-member"><div class="m-avatar">YQ</div><div><div class="m-name">Dr Yue Qu</div><div class="m-affil">Monash University</div></div></div>
+      <div class="com-member"><div class="m-avatar">QS</div><div><div class="m-name">Dr Qian Su</div><div class="m-affil">University of Technology Sydney</div></div></div>
     </div>
   </div>
 </div>
@@ -436,6 +443,19 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
   <div class="sponsor-grid" data-anim>
     <div class="sponsor-card"><img src="images/nanoinsights-logo.jpg" alt="NanoInsights logo" loading="lazy"></div>
     <div class="sponsor-card"><img src="images/ceatdi-logo.jpg" alt="CEATDI &amp; Monash Suzhou logo" loading="lazy"></div>
+  </div>
+</div>
+</section>
+
+<!-- SUPPORTERS -->
+<section class="section supporter-section" id="supporters">
+<div class="container">
+  <div data-anim>
+    <div class="section-label"><span class="en">Partners</span><span class="zh">合作支持</span></div>
+    <div class="section-title"><span class="en">Supporters</span><span class="zh">支持单位</span></div>
+  </div>
+  <div class="supporter-grid" data-anim>
+    <div class="supporter-card"><img src="images/iscb-china-logo.png" alt="ISCB China Council logo" loading="lazy"></div>
   </div>
 </div>
 </section>
