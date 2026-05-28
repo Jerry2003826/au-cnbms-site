@@ -169,10 +169,14 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .supporter-card img{width:100%;max-width:420px;max-height:120px;object-fit:contain}
 /* VISA */
 .visa-section{background:linear-gradient(180deg,var(--c-bg) 0%,#eef2ff 100%)}
-.visa-card{margin-top:2.5rem;padding:2.5rem;border-radius:var(--radius);background:var(--c-white);border:1px solid var(--c-border);box-shadow:0 4px 24px rgba(15,43,91,.04);max-width:760px}
-.visa-card p{font-size:1.05rem;line-height:1.85;color:var(--c-text);margin-bottom:1.5rem}
-.visa-card a{color:var(--c-blue);text-decoration:underline;text-underline-offset:3px}
-.visa-card .btn{font-size:.9rem;padding:.75rem 1.6rem;text-decoration:none}
+.visa-card{margin-top:2.5rem;padding:2rem 2.25rem;border-radius:var(--radius);background:var(--c-white);border:1px solid var(--c-border);border-left:4px solid var(--c-blue);box-shadow:0 4px 24px rgba(15,43,91,.04);max-width:720px}
+.visa-card p{font-size:1.02rem;line-height:1.85;color:var(--c-muted);margin-bottom:1.25rem}
+.visa-card p strong{color:var(--c-navy);font-weight:600}
+.visa-card a.visa-email{color:var(--c-blue);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(26,109,255,.35);transition:border-color .2s}
+.visa-card a.visa-email:hover{border-bottom-color:var(--c-blue)}
+.visa-contact{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;padding-top:1.25rem;border-top:1px solid var(--c-border)}
+.visa-contact-label{font-size:.85rem;font-weight:600;color:var(--c-navy)}
+.visa-contact .btn-primary{font-size:.88rem;padding:.65rem 1.4rem;white-space:nowrap;color:var(--c-white)!important;text-decoration:none!important}
 /* FOOTER */
 .footer{background:var(--c-dark);color:rgba(255,255,255,.5);padding:3rem 0;text-align:center;font-size:.85rem}
 .footer a{color:var(--c-accent)}
@@ -468,8 +472,12 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <div class="section-title"><span class="en">Invitation Letter &amp; Visa</span><span class="zh">邀请函与签证</span></div>
   </div>
   <div class="visa-card" data-anim>
-    <p><span class="en">Please contact the Australia theme co-chair if you require an official invitation letter to support institutional travel approval and/or a visa application. Email: <a href="mailto:aucnbms@gmail.com">aucnbms@gmail.com</a></span><span class="zh">如需正式邀请函以协助所在机构的出行审批或签证申请，请联系澳大利亚分主题联合主席。邮箱：<a href="mailto:aucnbms@gmail.com">aucnbms@gmail.com</a></span></p>
-    <a class="btn btn-primary" href="mailto:aucnbms@gmail.com?subject=Invitation%20Letter%20Request%20-%20ACBS%202026"><span class="en">Contact Australia Theme Co-Chair →</span><span class="zh">联系澳方联合主席 →</span></a>
+    <p><span class="en">Please contact the <strong>Australia theme co-chair</strong> if you require an official invitation letter to support institutional travel approval and/or a visa application.</span><span class="zh">如需正式邀请函以协助所在机构的出行审批或签证申请，请联系<strong>澳大利亚分主题联合主席</strong>。</span></p>
+    <div class="visa-contact">
+      <span class="visa-contact-label"><span class="en">Email</span><span class="zh">邮箱</span></span>
+      <a class="visa-email" href="mailto:aucnbms@gmail.com">aucnbms@gmail.com</a>
+      <a class="btn btn-primary" href="mailto:aucnbms@gmail.com?subject=Invitation%20Letter%20Request%20-%20ACBS%202026"><span class="en">Send request</span><span class="zh">发送邮件</span></a>
+    </div>
   </div>
 </div>
 </section>
