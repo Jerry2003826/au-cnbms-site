@@ -169,6 +169,41 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .supporter-card img{width:100%;max-width:420px;max-height:120px;object-fit:contain}
 .supporter-card.text-card{text-align:center}
 .supporter-name{max-width:380px;font-weight:700;font-size:1rem;line-height:1.45;color:var(--c-navy)}
+/* SPEAKERS */
+.speakers-section{background:var(--c-white)}
+.speaker-filters{display:flex;gap:.5rem;margin:2rem 0 0;flex-wrap:wrap}
+.speaker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-top:2rem}
+.speaker-card{background:var(--c-white);border:1px solid var(--c-border);border-radius:var(--radius-sm);overflow:hidden;cursor:pointer;transition:all .25s;display:flex;flex-direction:column;text-align:left;width:100%;font:inherit;color:inherit;padding:0}
+.speaker-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(15,43,91,.08);border-color:var(--c-blue)}
+.speaker-card:focus-visible{outline:2px solid var(--c-blue);outline-offset:3px}
+.speaker-photo{aspect-ratio:1;overflow:hidden;background:#e8eef8}
+.speaker-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.speaker-body{padding:1.05rem 1.15rem 1.2rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.speaker-name{font-weight:600;font-size:.96rem;color:var(--c-navy);line-height:1.35}
+.speaker-role{font-size:.72rem;color:var(--c-accent);font-weight:600;letter-spacing:.03em}
+.speaker-affil{font-size:.8rem;color:var(--c-muted);line-height:1.45}
+.speaker-talk{font-size:.8rem;color:var(--c-blue);line-height:1.45;margin-top:.4rem;font-style:italic;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.speaker-more{margin-top:auto;padding-top:.75rem;font-size:.78rem;font-weight:600;color:var(--c-navy)}
+.spk-overlay{position:fixed;inset:0;z-index:200;background:rgba(10,22,40,.58);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:1.25rem;opacity:0;pointer-events:none;transition:opacity .25s}
+.spk-overlay[hidden]{display:none}
+.spk-overlay.open{opacity:1;pointer-events:auto}
+.spk-modal{width:min(820px,100%);max-height:min(90vh,880px);overflow:auto;background:var(--c-white);border-radius:var(--radius);box-shadow:0 24px 60px rgba(10,22,40,.28);display:grid;grid-template-columns:240px 1fr}
+.spk-modal-photo{background:#e8eef8;min-height:280px}
+.spk-modal-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.spk-modal-body{padding:1.7rem 1.85rem 1.85rem;position:relative}
+.spk-close{position:absolute;top:.9rem;right:.9rem;width:36px;height:36px;border:0;border-radius:50%;background:#f1f5f9;cursor:pointer;font-size:1.25rem;line-height:1;color:var(--c-navy)}
+.spk-close:hover{background:#e2e8f0}
+.spk-modal-name{font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--c-navy);padding-right:2.2rem;line-height:1.25}
+.spk-modal-role{margin-top:.35rem;font-size:.78rem;color:var(--c-accent);font-weight:600;letter-spacing:.03em}
+.spk-modal-affil{margin-top:.25rem;font-size:.9rem;color:var(--c-muted)}
+.spk-modal-talk{margin-top:1rem;padding:0.85rem 1rem;border-radius:var(--radius-sm);background:var(--c-blue-light);color:var(--c-navy);font-size:.9rem;line-height:1.55}
+.spk-modal-talk strong{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-blue);margin-bottom:.25rem}
+.spk-modal-bio{margin-top:1.1rem;font-size:.95rem;line-height:1.8;color:var(--c-text)}
+.spk-modal-bio p+p{margin-top:.85rem}
+@media(max-width:720px){
+.spk-modal{grid-template-columns:1fr}
+.spk-modal-photo{height:220px;min-height:0}
+}
 /* VISA */
 .visa-section{background:linear-gradient(180deg,var(--c-bg) 0%,#eef2ff 100%)}
 .visa-card{margin-top:2.5rem;padding:2rem 2.25rem;border-radius:var(--radius);background:var(--c-white);border:1px solid var(--c-border);border-left:4px solid var(--c-blue);box-shadow:0 4px 24px rgba(15,43,91,.04);max-width:720px}
@@ -198,7 +233,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .nav-links a{color:var(--c-text)!important;display:inline-flex;justify-content:center;padding:.45rem .75rem;border-bottom:0}
 .nav-links .nav-cta{width:auto;min-width:max-content;margin-top:.35rem;padding:.65rem 1.35rem;color:var(--c-white)!important;border-radius:100px}
 .nav-toggle{display:block}
-.hotel-grid,.com-grid{grid-template-columns:1fr}
+.hotel-grid,.com-grid,.speaker-grid{grid-template-columns:1fr}
 .tl-item{flex-direction:column;gap:.3rem}
 .tl-time{width:auto}
 .topic-card.full-width{grid-column:auto}
@@ -216,6 +251,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
     <li><a href="#home"><span class="en">Home</span><span class="zh">首页</span></a></li>
     <li><a href="#about"><span class="en">About</span><span class="zh">关于</span></a></li>
     <li><a href="#program"><span class="en">Program</span><span class="zh">议程</span></a></li>
+    <li><a href="#speakers"><span class="en">Speakers</span><span class="zh">嘉宾</span></a></li>
     <li><a href="#venue"><span class="en">Venue</span><span class="zh">场地</span></a></li>
     <li><a href="#accommodation"><span class="en">Accommodation</span><span class="zh">住宿</span></a></li>
     <li><a href="#committee"><span class="en">Committee</span><span class="zh">组委会</span></a></li>
@@ -355,6 +391,38 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
   </div>
 </div>
 </section>
+
+<!-- SPEAKERS -->
+<section class="section speakers-section" id="speakers">
+<div class="container">
+  <div data-anim>
+    <div class="section-label"><span class="en">Faculty</span><span class="zh">演讲阵容</span></div>
+    <div class="section-title"><span class="en">Confirmed Speakers</span><span class="zh">已确认演讲嘉宾</span></div>
+    <p class="section-desc"><span class="en">Confirmed speakers with photographs, biographies and presentation titles. Additional speakers will be announced as they are confirmed.</span><span class="zh">已确认演讲嘉宾的照片、简介与报告题目。更多嘉宾将陆续公布。</span></p>
+  </div>
+  <div class="speaker-filters" id="speakerFilters" data-anim>
+    <button class="day-tab active" type="button" data-filter="all"><span class="en">All</span><span class="zh">全部</span></button>
+    <button class="day-tab" type="button" data-filter="infection"><span class="en">Infection &amp; One Health</span><span class="zh">感染与同一健康</span></button>
+    <button class="day-tab" type="button" data-filter="immunity"><span class="en">Immunity, Inflammation &amp; Cancer</span><span class="zh">免疫、炎症与肿瘤</span></button>
+    <button class="day-tab" type="button" data-filter="drug"><span class="en">Biomedical Engineering &amp; Drug Discovery</span><span class="zh">生物医学工程与药物研发</span></button>
+    <button class="day-tab" type="button" data-filter="ai"><span class="en">Computational Biology &amp; AI</span><span class="zh">计算生物学与人工智能</span></button>
+  </div>
+  <div class="speaker-grid" id="speakerGrid" data-anim></div>
+</div>
+</section>
+<div class="spk-overlay" id="spkOverlay" hidden>
+  <div class="spk-modal" role="dialog" aria-modal="true" aria-labelledby="spkModalName">
+    <div class="spk-modal-photo"><img id="spkModalImg" alt=""></div>
+    <div class="spk-modal-body">
+      <button class="spk-close" id="spkClose" type="button" aria-label="Close">×</button>
+      <div class="spk-modal-name" id="spkModalName"></div>
+      <div class="spk-modal-role" id="spkModalRole"></div>
+      <div class="spk-modal-affil" id="spkModalAffil"></div>
+      <div class="spk-modal-talk" id="spkModalTalk" hidden></div>
+      <div class="spk-modal-bio" id="spkModalBio"></div>
+    </div>
+  </div>
+</div>
 
 <!-- VENUE -->
 <section class="section" id="venue">
@@ -512,13 +580,324 @@ window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scr
 document.getElementById('navToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
 // Day tabs
-document.querySelectorAll('.day-tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.day-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.day-content').forEach(c=>c.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.day).classList.add('active')})});
+document.querySelectorAll('.day-tabs .day-tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.day-tabs .day-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.day-content').forEach(c=>c.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.day).classList.add('active')})});
 // Language toggle
 const langBtn=document.getElementById('langToggle');
 langBtn.addEventListener('click',()=>{const html=document.documentElement;if(html.lang==='en'){html.lang='zh';langBtn.textContent='EN'}else{html.lang='en';langBtn.textContent='中文'}});
 // Intersection Observer
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('[data-anim]').forEach(el=>obs.observe(el));
+
+const SPEAKERS = [
+  {
+    "id": "xuegong-zhang",
+    "name": "Prof Xuegong Zhang",
+    "role": "ISCB Fellow, IEEE Fellow, FAAIA",
+    "affil": "Tsinghua University",
+    "theme": "ai",
+    "photo": "images/speakers/xuegong-zhang.jpg",
+    "talk": "",
+    "bio": [
+      "Xuegong Zhang is Professor of Pattern Recognition and Bioinformatics at Tsinghua University, Department of Automation, Adjunct Professor of the School of Life Sciences and School of Medicine, and a member of the Faculty Committees of the Department of Statistics and Data Science and of the Vanke School of Public Health.",
+      "He received his BS degree in 1989 and Ph.D. degree in 1994, both from Tsinghua University, after which he joined the Tsinghua faculty. He was a visiting scientist at the Harvard School of Public Health in 2001–2002 and 2006, and a visiting scholar at the University of Southern California in 2007. He was elected as ISCB Fellow and CAAI Fellow in 2020.",
+      "He is the current Vice President of ISCB, the founding chair of ISCB-China, and the co-Editor-in-Chief of the journal Quantitative Biology. His research interests include machine learning, AI foundation models, the human cell atlas, intelligent precision medicine, AI virtual cells and digital life systems."
+    ]
+  },
+  {
+    "id": "jieming-qu",
+    "name": "Prof Jieming Qu",
+    "role": "Fellow, American Academy of Microbiology",
+    "affil": "Ruijin Hospital, Shanghai Jiao Tong University School of Medicine",
+    "theme": "infection",
+    "photo": "images/speakers/jieming-qu.jpg",
+    "talk": "",
+    "bio": [
+      "Jieming Qu is Professor of Pulmonary and Critical Care Medicine at Ruijin Hospital, Shanghai Jiao Tong University School of Medicine. He is a Fellow of the American Academy of Microbiology, the 11th President of the Chinese Thoracic Society, and President-elect of the Chest Physicians Society of the Chinese Medical Doctor Association.",
+      "He serves as Director of the Institute of Respiratory Diseases and the Shanghai Key Laboratory of Severe Respiratory Infections. His research focuses on respiratory infectious diseases, pulmonary and critical care medicine, severe respiratory infections, and translational clinical research.",
+      "He has led numerous national research programmes, including two National Natural Science Foundation of China Key Projects and a National Key Research and Development Program. Professor Qu has received multiple prestigious awards, including the Shanghai Science and Technology Progress First Prize and the Asia-Pacific Clinical Medicine Award. He has published more than 160 SCI-indexed papers, including articles in Cell, The Lancet, and The BMJ."
+    ]
+  },
+  {
+    "id": "youming-zhang",
+    "name": "Prof Youming Zhang",
+    "role": "CAE Foreign Member, acatech Member, MAE",
+    "affil": "Shandong University",
+    "theme": "infection",
+    "photo": "images/speakers/youming-zhang.jpg",
+    "talk": "",
+    "bio": [
+      "Youming Zhang is a foreign member of the Chinese Academy of Engineering, and a member of Academia Europaea and acatech (National Academy of Science and Engineering, Germany). He received his PhD at Ruprecht-Karls-Universität Heidelberg in 1994.",
+      "After postdoctoral research at Heidelberg University and the European Molecular Biology Laboratory (EMBL), he founded Gene Bridges GmbH (Germany) in 2000 as Co-founder and Chief Scientific Officer. Since 2013, he has served as Director of the State Key Laboratory of Microbial Technology, Shandong University.",
+      "His research is dedicated to the invention of Red/ET recombineering and its application in microbial natural products, humanized animal models, and tumour-targeting bacteria. He has published over 280 SCI-indexed papers, with more than 17,200 citations and an H-index of 66."
+    ]
+  },
+  {
+    "id": "shengying-li",
+    "name": "Prof Shengying Li",
+    "role": "",
+    "affil": "Shandong University",
+    "theme": "infection",
+    "photo": "images/speakers/shengying-li.jpg",
+    "talk": "",
+    "bio": [
+      "Shengying Li is a Professor at the State Key Laboratory of Microbial Technology, Microbial Technology Institute, Shandong University. He obtained his bachelor’s degree in Biology and master’s degree in Microbiology from the School of Life Sciences, Xiamen University, in 2000 and 2003, and earned his Ph.D. in Medicinal Chemistry at the University of Michigan, Ann Arbor, in 2009.",
+      "From 2010–2012 he conducted postdoctoral research in Prof. David H. Sherman’s laboratory at the Life Sciences Institute, University of Michigan. From 2012–2018 he served as full professor and founding director of the Shandong Provincial Key Laboratory of Synthetic Biology at the Qingdao Institute of Bioenergy and Bioprocess Technology, Chinese Academy of Sciences. He joined Shandong University in 2018.",
+      "His major research interests include natural product biosynthesis, cytochrome P450 enzymes, and plastic biodegradation. He has published more than 160 peer-reviewed papers in Nature, Nat. Synth., Nat. Catal., Nat. Commun., PNAS, JACS, Angew. Chem. and other journals. He received the Young Chemical Biologist Award of the International Chemical Biology Society in 2019, and serves as Executive Editor for Engineering Microbiology and on several other editorial boards."
+    ]
+  },
+  {
+    "id": "zhiyong-zong",
+    "name": "Prof Zhiyong Zong",
+    "role": "",
+    "affil": "West China Hospital, Sichuan University",
+    "theme": "infection",
+    "photo": "images/speakers/zhiyong-zong.jpg",
+    "talk": "",
+    "bio": [
+      "Prof Zong is a senior physician-scientist in infectious diseases and leads the infectious diseases ward at West China Hospital, Sichuan University, Chengdu, China. His main research interests are carbapenem-resistant Enterobacteriaceae, non-tuberculous mycobacteria, bacteriophages, and bacterial genomes. He has authored more than 260 peer-reviewed papers in journals including BMJ, Nature Communications, Lancet Microbe, and Clinical Infectious Diseases."
+    ]
+  },
+  {
+    "id": "jamie-rossjohn",
+    "name": "Prof Jamie Rossjohn",
+    "role": "FAA, FRS",
+    "affil": "Monash University",
+    "theme": "immunity",
+    "photo": "images/speakers/jamie-rossjohn.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Jamie Rossjohn FAA FRS is principally known for his contributions to the understanding of disease and the vertebrate host response, both from the aspect of protective and deleterious immunity. He has used structural biology to understand how T cell receptors recognise peptides, lipids and metabolites.",
+      "He has unearthed structural mechanisms of Major Histocompatibility Complex (MHC) polymorphism impacting on viral immunity, drug and food hypersensitivities and T cell mediated autoimmunity. Rossjohn has pioneered our molecular understanding of how T cells bind lipid-based antigens presented by the CD1 family, and has elucidated the structural basis of how vitamin B metabolites are presented by the MHC class I related protein, MR1 — revealing an entirely new class of antigen for T cells."
+    ]
+  },
+  {
+    "id": "zhoujie-ding",
+    "name": "Dr Zhoujie Ding",
+    "role": "Head, Humoral Dynamics & Autoimmunity Laboratory",
+    "affil": "School of Translational Medicine, Monash University",
+    "theme": "immunity",
+    "photo": "images/speakers/zhoujie-ding.jpg",
+    "talk": "What makes a plasma cell long-lived?",
+    "bio": [
+      "Dr Zhoujie Ding’s research focuses on the regulation of B-cell and plasma-cell fates and their interactions with other cell types both under homeostasis and in antibody-mediated autoimmune diseases, including systemic lupus erythematosus and autoimmune encephalitis.",
+      "She leads the Humoral Dynamics and Autoimmunity Laboratory, investigating fundamental mechanisms of immune dynamics across tissues, with the goal of translating these discoveries into clinically actionable biomarkers and targeted therapies. She has published in leading journals including Immunity and the Journal of Experimental Medicine, secured two NHMRC Ideas Grants and a Monash Future Leader Fellowship, and received the 2024 ASI Breakthrough Immunology Award."
+    ]
+  },
+  {
+    "id": "helena-qin",
+    "name": "A/Prof Chengxue Helena Qin",
+    "role": "Australian Research Council Future Leader",
+    "affil": "Monash Institute of Pharmaceutical Sciences, Monash University",
+    "theme": "immunity",
+    "photo": "images/speakers/helena-qin.jpg",
+    "talk": "Beyond Inflammation Suppression: Harnessing Resolution and Repair in Cardiometabolic Disease",
+    "bio": [
+      "A/Prof Chengxue Helena Qin is a translational pharmacologist whose research sits at the intersection of inflammation resolution and cardiometabolic disease. She focuses on how immune and inflammatory pathways can be harnessed to promote the active resolution of inflammation and tissue repair, rather than simply suppressing inflammation.",
+      "Currently an Australian Research Council Future Leader and previously a National Heart Foundation Future Fellow, she completed her PhD at the University of Melbourne, followed by postdoctoral training at the Baker Heart and Diabetes Institute. Since establishing her independent group at the Monash Institute of Pharmaceutical Sciences, she has built an internationally recognised program on pro-resolving mediators, immune–vascular interactions and GPCR signalling.",
+      "She has authored more than 70 peer-reviewed publications in journals including Circulation Research, Nature Communications, Cardiovascular Research, Circulation and Science, and has received more than 20 national and international awards. She currently serves on the IUPHAR Cardiovascular Committee and previously served on the Board of Directors of ASCEPT."
+    ]
+  },
+  {
+    "id": "di-yu",
+    "name": "Prof Di Yu",
+    "role": "FAHMS",
+    "affil": "The University of Queensland",
+    "theme": "immunity",
+    "photo": "images/speakers/di-yu.jpg",
+    "talk": "From T Cell Biology to Immunotherapy Innovation",
+    "bio": [
+      "Dr Di Yu is the Chair in Paediatric Immunotherapy and inaugural Director of the Ian Frazer Centre of Children's Immunotherapy Research at the University of Queensland. As a Professor of Immunology, he heads the Systems and Translational T-cell Immunology Laboratory.",
+      "He was educated at Wuhan University (BSc) and the Australian National University (PhD), followed by postdoctoral training at the Garvan Institute of Medical Research. Before joining UQ, he held faculty positions at Monash University and ANU. His research focuses on T cell subsets, systems immunology techniques to assess immune status, and novel therapies to regulate T cell functions in autoimmune diseases and cancer.",
+      "Dr Yu has authored over 140 publications in premier journals, including Nature, Nature Immunology, Nature Medicine, Nature Computational Science, Immunity and Science Immunology as a senior author. He is a Fellow of the Australian Academy of Health and Medical Sciences and received the 2023 Jacques Miller Medal from the Australian Academy of Science. He also serves as Vice President of FIMSA and on committees for the International Union of Immunological Societies and the Cytokine Society."
+    ]
+  },
+  {
+    "id": "zhian-chen",
+    "name": "Dr Zhian (Anthony) Chen",
+    "role": "NHMRC Emerging Leader Fellow",
+    "affil": "UQ Frazer Institute, The University of Queensland",
+    "theme": "immunity",
+    "photo": "images/speakers/zhian-chen.jpg",
+    "talk": "The biochemical control of immune cell fate decision",
+    "bio": [
+      "Dr Zhian (Anthony) Chen is an NHMRC Emerging Leader Fellow and Group Leader of the Biochemical Control and Synthetic Immunology (BCSI) lab at the UQ Frazer Institute. He leads a team under the UQ Health Research Accelerator (HERA) program to investigate T cell-mediated immunity.",
+      "His research focuses on the molecular mechanisms controlling the differentiation and function of T cells in humoral and cellular immunity, supporting antibody responses and preventing T cell exhaustion in chronic infections and cancers. By integrating immunology with biochemistry and systems-level multi-omics, his laboratory studies how cytokine and metabolic signalling pathways shape immune responses. His work has led to first- or co-first-author publications in Nature, Nature Immunology and Science Immunology."
+    ]
+  },
+  {
+    "id": "sifei-han",
+    "name": "A/Prof Sifei Han",
+    "role": "Lab Head",
+    "affil": "China Pharmaceutical University / Monash University",
+    "theme": "drug",
+    "photo": "images/speakers/sifei-han.jpg",
+    "talk": "Drug delivery to the lymphatic system for enhanced pharmacokinetic and pharmacodynamic outcomes",
+    "bio": [
+      "Sifei Han is Lab Head in the School of Pharmacy, China Pharmaceutical University, and a Research Fellow in the Faculty of Pharmacy and Pharmaceutical Sciences, Monash University.",
+      "A major interest of the Han lab has been using biomimetic approaches to enhance drug transport into and through the lymphatic system. This has shown promising utility for direct access to immune, infection and cancer-related targets in the lymphatics, avoidance of first-pass metabolism, and reduction of hepatic toxicity.",
+      "Sifei is a co-inventor of a lymph-directing technology platform licensed from Monash University, which formed the foundation of Seaport Therapeutics. Drug candidates derived from the technology have progressed to Phase II clinical trials. Ongoing research aims to develop an integrated lymphatics-focused delivery platform for both small and macromolecule drugs."
+    ]
+  },
+  {
+    "id": "yin-yao",
+    "name": "Prof Yin Yao",
+    "role": "Deputy Director",
+    "affil": "Tongji Hospital, Huazhong University of Science and Technology",
+    "theme": "immunity",
+    "photo": "images/speakers/yin-yao.jpg",
+    "talk": "The regulation of IgE production",
+    "bio": [
+      "Dr Yin Yao is Professor and Deputy Director of the Department of Otolaryngology–Head and Neck Surgery at Tongji Hospital, Tongji Medical College, Huazhong University of Science and Technology. He completed his PhD through a joint program between Huazhong University of Science and Technology and the Australian National University, followed by postdoctoral training at the University of Queensland.",
+      "His research focuses on the pathogenesis and precision management of allergic rhinitis and chronic rhinosinusitis. He has published over 30 SCI papers as corresponding or first author in journals including Nature, Nature Immunology, Allergy, and Journal of Allergy and Clinical Immunology."
+    ]
+  },
+  {
+    "id": "zheng-liu",
+    "name": "Prof Zheng Liu",
+    "role": "FAAAAI",
+    "affil": "Zhongnan Hospital, Wuhan University",
+    "theme": "immunity",
+    "photo": "images/speakers/zheng-liu.jpg",
+    "talk": "Local IgE production in nasal polyps",
+    "bio": [
+      "Dr Zheng Liu is a Professor in the Department of Otorhinolaryngology–Head and Neck Surgery at Zhongnan Hospital, Wuhan University. He also serves as Vice President of the Chinese Society of Allergy and Vice President of the Otolaryngology Branch of the Chinese Medical Doctor Association.",
+      "His research focuses on the basic and translational investigation of sinusitis and rhinitis, with particular emphasis on the endotypes and immunopathogenesis of chronic rhinosinusitis and allergic rhinitis. His group was the first to demonstrate that more than half of Chinese patients with chronic rhinosinusitis with nasal polyps exhibit a non-eosinophilic inflammatory profile — a feature distinctly different from that seen in Caucasian populations.",
+      "His work has revealed the importance of T- and B-cell subsets in regulating local and systemic IgE production, and has contributed to endotype-guided therapeutic strategies. He has published over 120 papers as corresponding author in journals including Nature Immunology, Nature Communications, the Journal of Allergy and Clinical Immunology, and Allergy, and has received the National Science Fund for Distinguished Young Scholars."
+    ]
+  },
+  {
+    "id": "lai-guan-ng",
+    "name": "Prof Lai Guan Ng",
+    "role": "New Cornerstone Investigator",
+    "affil": "Westlake University",
+    "theme": "immunity",
+    "photo": "images/speakers/lai-guan-ng.jpg",
+    "talk": "Neutrophils: One-Trick Leukocytes?",
+    "bio": [
+      "Prof Lai Guan Ng conducted his PhD at the Garvan Institute of Medical Research in Sydney. After postdoctoral training, he joined the Singapore Immunology Network (SIgN) in 2009 and, over the next 13 years, established himself as a leader in myeloid cell biology, focusing on myeloid cell ontogeny, cellular behaviour and tissue adaptation.",
+      "In 2023 he became a Senior Investigator at the Shanghai Immune Therapy Institute, Director of the Center for Systems Immunology and a Professor at Shanghai Jiao Tong University. He has since relocated to the School of Medicine at Westlake University, Hangzhou.",
+      "He has published in Science, Nature, Science Immunology, Immunity, Journal of Experimental Medicine, Science Advances, Advanced Materials and Nature Protocols. He has been listed as a Clarivate Highly Cited Researcher for six consecutive years (2020–2025) and was selected as a New Cornerstone Investigator."
+    ]
+  },
+  {
+    "id": "xiaoyu-hu",
+    "name": "Prof Xiaoyu Hu",
+    "role": "Vice Dean, School of Medicine",
+    "affil": "Westlake University",
+    "theme": "immunity",
+    "photo": "images/speakers/xiaoyu-hu.jpg",
+    "talk": "Tissue resident myeloid cells: old folks with new surprises",
+    "bio": [
+      "Xiaoyu Hu received her Bachelor of Medicine degree from Peking University and her Ph.D. in immunology from Cornell University. She is currently a Professor and Vice Dean at Westlake University School of Medicine. Her research focuses on the physiological and pathological functions of tissue-resident myeloid cells, particularly macrophages and mast cells.",
+      "She is the recipient of the Christina Fleischmann Award to Young Women Investigators from the International Cytokine & Interferon Society and a Newton Advanced Fellowship from the U.K. Royal Society. She was listed among the “50 scientists that inspire” during the Cell Press 50th anniversary event in 2024 and was one of five female immunologists featured by Nature Immunology.",
+      "She holds editorial positions with Immunity, Trends in Immunology, Science Advances and Mucosal Immunology, and has been invited to write for Annual Review of Immunology and Nature Reviews Immunology, including as a plenary speaker at the International Congress of Immunology."
+    ]
+  },
+  {
+    "id": "xingming-zhao",
+    "name": "Prof Xing-Ming Zhao",
+    "role": "Fellow, China Association of Artificial Intelligence; Fellow of IET",
+    "affil": "College of Biomedical Engineering, Fudan University",
+    "theme": "ai",
+    "photo": "images/speakers/xingming-zhao.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Xing-Ming Zhao is a distinguished professor and Vice Dean of the College of Biomedical Engineering, Fudan University. He received his PhD from the University of Science and Technology of China. He is President of the Shanghai Society for Bioinformatics and Vice President of ISCB-China.",
+      "He focuses on interdisciplinary research between biomedicine and artificial intelligence, and has published more than 180 papers in peer-reviewed journals, including Nature and Cell. He is a Fellow of the China Association of Artificial Intelligence and a Fellow of IET, a senior member of IEEE, Co-Chair of the IEEE SMC Technical Committee on Systems Biology, and Vice-Chair of ACM SIGBIO China. He also serves as lead guest editor and editorial board member of journals including Science Bulletin, Genome Biology, IEEE TCSS, IEEE/ACM TCBB, Neurocomputing, Journal of Theoretical Biology and IET Systems Biology."
+    ]
+  },
+  {
+    "id": "junyu-xiao",
+    "name": "Prof Junyu Xiao",
+    "role": "",
+    "affil": "Peking University",
+    "theme": "immunity",
+    "photo": "images/speakers/junyu-xiao.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Junyu Xiao earned his PhD in biological chemistry from the University of Michigan. After postdoctoral training in Dr Jack Dixon’s laboratory at UCSD, he joined Peking University in 2014.",
+      "He and his team focus on the molecular mechanisms underlying immunoglobulins (antibodies), including interactions between different immunoglobulins and their specific receptors and binding partners, as well as the interplay between immunoglobulins and the complement system. As corresponding or co-corresponding author, he has published over 40 papers in leading journals including Nature, Science and Cell."
+    ]
+  }
+];
+const speakerGrid = document.getElementById('speakerGrid');
+const speakerFilters = document.getElementById('speakerFilters');
+const spkOverlay = document.getElementById('spkOverlay');
+const spkClose = document.getElementById('spkClose');
+let speakerFilter = 'all';
+let lastSpeakerBtn = null;
+
+function esc(s){
+  return String(s||'').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function renderSpeakers(){
+  const list = SPEAKERS.filter(s => speakerFilter === 'all' || s.theme === speakerFilter);
+  speakerGrid.innerHTML = list.map(s => `
+    <button class="speaker-card" type="button" data-id="${esc(s.id)}" aria-label="${esc(s.name)}">
+      <div class="speaker-photo"><img src="${esc(s.photo)}" alt="${esc(s.name)}" loading="lazy"></div>
+      <div class="speaker-body">
+        <div class="speaker-name">${esc(s.name)}</div>
+        ${s.role ? `<div class="speaker-role">${esc(s.role)}</div>` : ''}
+        <div class="speaker-affil">${esc(s.affil)}</div>
+        ${s.talk ? `<div class="speaker-talk">${esc(s.talk)}</div>` : ''}
+        <div class="speaker-more"><span class="en">Read bio →</span><span class="zh">查看简介 →</span></div>
+      </div>
+    </button>`).join('');
+}
+
+function openSpeaker(id, btn){
+  const s = SPEAKERS.find(x => x.id === id);
+  if(!s) return;
+  lastSpeakerBtn = btn || null;
+  document.getElementById('spkModalImg').src = s.photo;
+  document.getElementById('spkModalImg').alt = s.name;
+  document.getElementById('spkModalName').textContent = s.name;
+  const role = document.getElementById('spkModalRole');
+  role.textContent = s.role || '';
+  role.hidden = !s.role;
+  document.getElementById('spkModalAffil').textContent = s.affil;
+  const talk = document.getElementById('spkModalTalk');
+  if(s.talk){
+    talk.hidden = false;
+    talk.innerHTML = `<strong><span class="en">Talk</span><span class="zh">报告题目</span></strong>${esc(s.talk)}`;
+  }else{
+    talk.hidden = true;
+    talk.innerHTML = '';
+  }
+  document.getElementById('spkModalBio').innerHTML = s.bio.map(p => `<p>${esc(p)}</p>`).join('');
+  spkOverlay.hidden = false;
+  requestAnimationFrame(()=>spkOverlay.classList.add('open'));
+  document.body.style.overflow = 'hidden';
+  spkClose.focus();
+}
+
+function closeSpeaker(){
+  spkOverlay.classList.remove('open');
+  spkOverlay.hidden = true;
+  document.body.style.overflow = '';
+  if(lastSpeakerBtn) lastSpeakerBtn.focus();
+}
+
+speakerFilters.addEventListener('click', e => {
+  const tab = e.target.closest('[data-filter]');
+  if(!tab) return;
+  speakerFilters.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  speakerFilter = tab.dataset.filter;
+  renderSpeakers();
+});
+
+speakerGrid.addEventListener('click', e => {
+  const card = e.target.closest('.speaker-card');
+  if(card) openSpeaker(card.dataset.id, card);
+});
+
+spkClose.addEventListener('click', closeSpeaker);
+spkOverlay.addEventListener('click', e => { if(e.target === spkOverlay) closeSpeaker(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape' && !spkOverlay.hidden) closeSpeaker(); });
+renderSpeakers();
+
 </script>
 </body>
 </html>
