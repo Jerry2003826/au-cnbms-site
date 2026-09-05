@@ -398,13 +398,14 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
   <div data-anim>
     <div class="section-label"><span class="en">Faculty</span><span class="zh">演讲阵容</span></div>
     <div class="section-title"><span class="en">Confirmed Speakers</span><span class="zh">已确认演讲嘉宾</span></div>
-    <p class="section-desc"><span class="en">Confirmed speakers with photographs, biographies and presentation titles. Additional speakers will be announced as they are confirmed.</span><span class="zh">已确认演讲嘉宾的照片、简介与报告题目。更多嘉宾将陆续公布。</span></p>
+    <p class="section-desc"><span class="en">Confirmed speakers with photographs, biographies and presentation titles. In alphabetical order. Additional speakers will be announced as they are confirmed.</span><span class="zh">已确认演讲嘉宾的照片、简介与报告题目，按姓氏字母顺序排列。更多嘉宾将陆续公布。</span></p>
   </div>
   <div class="speaker-filters" id="speakerFilters" data-anim>
     <button class="day-tab active" type="button" data-filter="all"><span class="en">All</span><span class="zh">全部</span></button>
     <button class="day-tab" type="button" data-filter="infection"><span class="en">Infection &amp; One Health</span><span class="zh">感染与同一健康</span></button>
     <button class="day-tab" type="button" data-filter="immunity"><span class="en">Immunity, Inflammation &amp; Cancer</span><span class="zh">免疫、炎症与肿瘤</span></button>
     <button class="day-tab" type="button" data-filter="drug"><span class="en">Biomedical Engineering &amp; Drug Discovery</span><span class="zh">生物医学工程与药物研发</span></button>
+    <button class="day-tab" type="button" data-filter="epi"><span class="en">Epidemiology &amp; Climate Change</span><span class="zh">流行病学与气候变化</span></button>
     <button class="day-tab" type="button" data-filter="ai"><span class="en">Computational Biology &amp; AI</span><span class="zh">计算生物学与人工智能</span></button>
   </div>
   <div class="speaker-grid" id="speakerGrid" data-anim></div>
@@ -590,126 +591,19 @@ document.querySelectorAll('[data-anim]').forEach(el=>obs.observe(el));
 
 const SPEAKERS = [
   {
-    "id": "xuegong-zhang",
-    "name": "Prof Xuegong Zhang",
-    "role": "ISCB Fellow, IEEE Fellow, FAAIA",
-    "affil": "Tsinghua University",
-    "theme": "ai",
-    "photo": "images/speakers/xuegong-zhang.jpg",
-    "talk": "",
-    "bio": [
-      "Xuegong Zhang is Professor of Pattern Recognition and Bioinformatics at Tsinghua University, Department of Automation, Adjunct Professor of the School of Life Sciences and School of Medicine, and a member of the Faculty Committees of the Department of Statistics and Data Science and of the Vanke School of Public Health.",
-      "He received his BS degree in 1989 and Ph.D. degree in 1994, both from Tsinghua University, after which he joined the Tsinghua faculty. He was a visiting scientist at the Harvard School of Public Health in 2001–2002 and 2006, and a visiting scholar at the University of Southern California in 2007. He was elected as ISCB Fellow and CAAI Fellow in 2020.",
-      "He is the current Vice President of ISCB, the founding chair of ISCB-China, and the co-Editor-in-Chief of the journal Quantitative Biology. His research interests include machine learning, AI foundation models, the human cell atlas, intelligent precision medicine, AI virtual cells and digital life systems."
-    ]
-  },
-  {
-    "id": "jieming-qu",
-    "name": "Prof Jieming Qu",
-    "role": "Fellow, American Academy of Microbiology",
-    "affil": "Ruijin Hospital, Shanghai Jiao Tong University School of Medicine",
-    "theme": "infection",
-    "photo": "images/speakers/jieming-qu.jpg",
-    "talk": "",
-    "bio": [
-      "Jieming Qu is Professor of Pulmonary and Critical Care Medicine at Ruijin Hospital, Shanghai Jiao Tong University School of Medicine. He is a Fellow of the American Academy of Microbiology, the 11th President of the Chinese Thoracic Society, and President-elect of the Chest Physicians Society of the Chinese Medical Doctor Association.",
-      "He serves as Director of the Institute of Respiratory Diseases and the Shanghai Key Laboratory of Severe Respiratory Infections. His research focuses on respiratory infectious diseases, pulmonary and critical care medicine, severe respiratory infections, and translational clinical research.",
-      "He has led numerous national research programmes, including two National Natural Science Foundation of China Key Projects and a National Key Research and Development Program. Professor Qu has received multiple prestigious awards, including the Shanghai Science and Technology Progress First Prize and the Asia-Pacific Clinical Medicine Award. He has published more than 160 SCI-indexed papers, including articles in Cell, The Lancet, and The BMJ."
-    ]
-  },
-  {
-    "id": "youming-zhang",
-    "name": "Prof Youming Zhang",
-    "role": "CAE Foreign Member, acatech Member, MAE",
-    "affil": "Shandong University",
-    "theme": "infection",
-    "photo": "images/speakers/youming-zhang.jpg",
-    "talk": "",
-    "bio": [
-      "Youming Zhang is a foreign member of the Chinese Academy of Engineering, and a member of Academia Europaea and acatech (National Academy of Science and Engineering, Germany). He received his PhD at Ruprecht-Karls-Universität Heidelberg in 1994.",
-      "After postdoctoral research at Heidelberg University and the European Molecular Biology Laboratory (EMBL), he founded Gene Bridges GmbH (Germany) in 2000 as Co-founder and Chief Scientific Officer. Since 2013, he has served as Director of the State Key Laboratory of Microbial Technology, Shandong University.",
-      "His research is dedicated to the invention of Red/ET recombineering and its application in microbial natural products, humanized animal models, and tumour-targeting bacteria. He has published over 280 SCI-indexed papers, with more than 17,200 citations and an H-index of 66."
-    ]
-  },
-  {
-    "id": "shengying-li",
-    "name": "Prof Shengying Li",
+    "id": "chengzhi-chen",
+    "name": "Prof Chengzhi Chen",
+    "surname": "Chen",
     "role": "",
-    "affil": "Shandong University",
-    "theme": "infection",
-    "photo": "images/speakers/shengying-li.jpg",
+    "affil": "Chongqing Medical University",
+    "theme": "epi",
+    "photo": "images/speakers/chengzhi-chen.jpg",
     "talk": "",
     "bio": [
-      "Shengying Li is a Professor at the State Key Laboratory of Microbial Technology, Microbial Technology Institute, Shandong University. He obtained his bachelor’s degree in Biology and master’s degree in Microbiology from the School of Life Sciences, Xiamen University, in 2000 and 2003, and earned his Ph.D. in Medicinal Chemistry at the University of Michigan, Ann Arbor, in 2009.",
-      "From 2010–2012 he conducted postdoctoral research in Prof. David H. Sherman’s laboratory at the Life Sciences Institute, University of Michigan. From 2012–2018 he served as full professor and founding director of the Shandong Provincial Key Laboratory of Synthetic Biology at the Qingdao Institute of Bioenergy and Bioprocess Technology, Chinese Academy of Sciences. He joined Shandong University in 2018.",
-      "His major research interests include natural product biosynthesis, cytochrome P450 enzymes, and plastic biodegradation. He has published more than 160 peer-reviewed papers in Nature, Nat. Synth., Nat. Catal., Nat. Commun., PNAS, JACS, Angew. Chem. and other journals. He received the Young Chemical Biologist Award of the International Chemical Biology Society in 2019, and serves as Executive Editor for Engineering Microbiology and on several other editorial boards."
-    ]
-  },
-  {
-    "id": "zhiyong-zong",
-    "name": "Prof Zhiyong Zong",
-    "role": "",
-    "affil": "West China Hospital, Sichuan University",
-    "theme": "infection",
-    "photo": "images/speakers/zhiyong-zong.jpg",
-    "talk": "",
-    "bio": [
-      "Prof Zong is a senior physician-scientist in infectious diseases and leads the infectious diseases ward at West China Hospital, Sichuan University, Chengdu, China. His main research interests are carbapenem-resistant Enterobacteriaceae, non-tuberculous mycobacteria, bacteriophages, and bacterial genomes. He has authored more than 260 peer-reviewed papers in journals including BMJ, Nature Communications, Lancet Microbe, and Clinical Infectious Diseases."
-    ]
-  },
-  {
-    "id": "jamie-rossjohn",
-    "name": "Prof Jamie Rossjohn",
-    "role": "FAA, FRS",
-    "affil": "Monash University",
-    "theme": "immunity",
-    "photo": "images/speakers/jamie-rossjohn.jpg",
-    "talk": "",
-    "bio": [
-      "Professor Jamie Rossjohn FAA FRS is principally known for his contributions to the understanding of disease and the vertebrate host response, both from the aspect of protective and deleterious immunity. He has used structural biology to understand how T cell receptors recognise peptides, lipids and metabolites.",
-      "He has unearthed structural mechanisms of Major Histocompatibility Complex (MHC) polymorphism impacting on viral immunity, drug and food hypersensitivities and T cell mediated autoimmunity. Rossjohn has pioneered our molecular understanding of how T cells bind lipid-based antigens presented by the CD1 family, and has elucidated the structural basis of how vitamin B metabolites are presented by the MHC class I related protein, MR1 — revealing an entirely new class of antigen for T cells."
-    ]
-  },
-  {
-    "id": "zhoujie-ding",
-    "name": "Dr Zhoujie Ding",
-    "role": "Head, Humoral Dynamics & Autoimmunity Laboratory",
-    "affil": "School of Translational Medicine, Monash University",
-    "theme": "immunity",
-    "photo": "images/speakers/zhoujie-ding.jpg",
-    "talk": "What makes a plasma cell long-lived?",
-    "bio": [
-      "Dr Zhoujie Ding’s research focuses on the regulation of B-cell and plasma-cell fates and their interactions with other cell types both under homeostasis and in antibody-mediated autoimmune diseases, including systemic lupus erythematosus and autoimmune encephalitis.",
-      "She leads the Humoral Dynamics and Autoimmunity Laboratory, investigating fundamental mechanisms of immune dynamics across tissues, with the goal of translating these discoveries into clinically actionable biomarkers and targeted therapies. She has published in leading journals including Immunity and the Journal of Experimental Medicine, secured two NHMRC Ideas Grants and a Monash Future Leader Fellowship, and received the 2024 ASI Breakthrough Immunology Award."
-    ]
-  },
-  {
-    "id": "helena-qin",
-    "name": "A/Prof Chengxue Helena Qin",
-    "role": "Australian Research Council Future Leader",
-    "affil": "Monash Institute of Pharmaceutical Sciences, Monash University",
-    "theme": "immunity",
-    "photo": "images/speakers/helena-qin.jpg",
-    "talk": "Beyond Inflammation Suppression: Harnessing Resolution and Repair in Cardiometabolic Disease",
-    "bio": [
-      "A/Prof Chengxue Helena Qin is a translational pharmacologist whose research sits at the intersection of inflammation resolution and cardiometabolic disease. She focuses on how immune and inflammatory pathways can be harnessed to promote the active resolution of inflammation and tissue repair, rather than simply suppressing inflammation.",
-      "Currently an Australian Research Council Future Leader and previously a National Heart Foundation Future Fellow, she completed her PhD at the University of Melbourne, followed by postdoctoral training at the Baker Heart and Diabetes Institute. Since establishing her independent group at the Monash Institute of Pharmaceutical Sciences, she has built an internationally recognised program on pro-resolving mediators, immune–vascular interactions and GPCR signalling.",
-      "She has authored more than 70 peer-reviewed publications in journals including Circulation Research, Nature Communications, Cardiovascular Research, Circulation and Science, and has received more than 20 national and international awards. She currently serves on the IUPHAR Cardiovascular Committee and previously served on the Board of Directors of ASCEPT."
-    ]
-  },
-  {
-    "id": "di-yu",
-    "name": "Prof Di Yu",
-    "role": "FAHMS",
-    "affil": "The University of Queensland",
-    "theme": "immunity",
-    "photo": "images/speakers/di-yu.jpg",
-    "talk": "From T Cell Biology to Immunotherapy Innovation",
-    "bio": [
-      "Dr Di Yu is the Chair in Paediatric Immunotherapy and inaugural Director of the Ian Frazer Centre of Children's Immunotherapy Research at the University of Queensland. As a Professor of Immunology, he heads the Systems and Translational T-cell Immunology Laboratory.",
-      "He was educated at Wuhan University (BSc) and the Australian National University (PhD), followed by postdoctoral training at the Garvan Institute of Medical Research. Before joining UQ, he held faculty positions at Monash University and ANU. His research focuses on T cell subsets, systems immunology techniques to assess immune status, and novel therapies to regulate T cell functions in autoimmune diseases and cancer.",
-      "Dr Yu has authored over 140 publications in premier journals, including Nature, Nature Immunology, Nature Medicine, Nature Computational Science, Immunity and Science Immunology as a senior author. He is a Fellow of the Australian Academy of Health and Medical Sciences and received the 2023 Jacques Miller Medal from the Australian Academy of Science. He also serves as Vice President of FIMSA and on committees for the International Union of Immunological Societies and the Cytokine Society."
-    ]
+      "Chengzhi Chen is a Professor and doctoral supervisor. He has been recognised as a Chongqing Top-Notch Young Talent, a Bayu Scholar (Young Scholar), a recipient of the Chongqing Top Ten Young Science and Technology Talent Award, and a Chongqing Academic and Technical Leader (Reserve Candidate).",
+      "He has led 19 research projects, including sub-projects of the National Key R&D Program and NSFC general projects. In the past five years he has published more than 30 papers as corresponding author in journals including Cell Metabolism, Nature Communications and PNAS. He has served as editor-in-chief of four monographs, contributed to eight planned textbooks, filed or been granted 30 national invention patents, and received a Second Prize of the Chongqing Natural Science Award and an Innovation Achievement Award from the China Association of Inventions."
+    ],
+    "given": "Chengzhi"
   },
   {
     "id": "zhian-chen",
@@ -722,7 +616,39 @@ const SPEAKERS = [
     "bio": [
       "Dr Zhian (Anthony) Chen is an NHMRC Emerging Leader Fellow and Group Leader of the Biochemical Control and Synthetic Immunology (BCSI) lab at the UQ Frazer Institute. He leads a team under the UQ Health Research Accelerator (HERA) program to investigate T cell-mediated immunity.",
       "His research focuses on the molecular mechanisms controlling the differentiation and function of T cells in humoral and cellular immunity, supporting antibody responses and preventing T cell exhaustion in chronic infections and cancers. By integrating immunology with biochemistry and systems-level multi-omics, his laboratory studies how cytokine and metabolic signalling pathways shape immune responses. His work has led to first- or co-first-author publications in Nature, Nature Immunology and Science Immunology."
-    ]
+    ],
+    "surname": "Chen",
+    "given": "Zhian"
+  },
+  {
+    "id": "zhoujie-ding",
+    "name": "Dr Zhoujie Ding",
+    "role": "Head, Humoral Dynamics & Autoimmunity Laboratory",
+    "affil": "School of Translational Medicine, Monash University",
+    "theme": "immunity",
+    "photo": "images/speakers/zhoujie-ding.jpg",
+    "talk": "What makes a plasma cell long-lived?",
+    "bio": [
+      "Dr Zhoujie Ding’s research focuses on the regulation of B-cell and plasma-cell fates and their interactions with other cell types both under homeostasis and in antibody-mediated autoimmune diseases, including systemic lupus erythematosus and autoimmune encephalitis.",
+      "She leads the Humoral Dynamics and Autoimmunity Laboratory, investigating fundamental mechanisms of immune dynamics across tissues, with the goal of translating these discoveries into clinically actionable biomarkers and targeted therapies. She has published in leading journals including Immunity and the Journal of Experimental Medicine, secured two NHMRC Ideas Grants and a Monash Future Leader Fellowship, and received the 2024 ASI Breakthrough Immunology Award."
+    ],
+    "surname": "Ding",
+    "given": "Zhoujie"
+  },
+  {
+    "id": "guanghui-dong",
+    "name": "Prof Guanghui Dong",
+    "surname": "Dong",
+    "role": "Vice Dean, School of Public Health",
+    "affil": "Sun Yat-sen University",
+    "theme": "epi",
+    "photo": "images/speakers/guanghui-dong.jpg",
+    "talk": "",
+    "bio": [
+      "Guanghui Dong is Vice Dean and Professor at the School of Public Health, Sun Yat-sen University, and Director of the Joint International Research Laboratory of Environment and Health, Ministry of Education. He has led 11 national projects, including key National R&D Programs and key NSFC projects, and more than 20 provincial or ministerial projects.",
+      "He has published more than 300 papers as first or corresponding author in journals such as The Lancet Planetary Health, Nature Mental Health, JAMA Network, Environmental Health Perspectives and Environmental Science & Technology. In the past five years he received one National Science and Technology Progress Award (second prize) and two provincial or ministerial first prizes. His research focuses on environmental epidemiology and environmental toxicology."
+    ],
+    "given": "Guanghui"
   },
   {
     "id": "sifei-han",
@@ -736,48 +662,9 @@ const SPEAKERS = [
       "Sifei Han is Lab Head in the School of Pharmacy, China Pharmaceutical University, and a Research Fellow in the Faculty of Pharmacy and Pharmaceutical Sciences, Monash University.",
       "A major interest of the Han lab has been using biomimetic approaches to enhance drug transport into and through the lymphatic system. This has shown promising utility for direct access to immune, infection and cancer-related targets in the lymphatics, avoidance of first-pass metabolism, and reduction of hepatic toxicity.",
       "Sifei is a co-inventor of a lymph-directing technology platform licensed from Monash University, which formed the foundation of Seaport Therapeutics. Drug candidates derived from the technology have progressed to Phase II clinical trials. Ongoing research aims to develop an integrated lymphatics-focused delivery platform for both small and macromolecule drugs."
-    ]
-  },
-  {
-    "id": "yin-yao",
-    "name": "Prof Yin Yao",
-    "role": "Deputy Director",
-    "affil": "Tongji Hospital, Huazhong University of Science and Technology",
-    "theme": "immunity",
-    "photo": "images/speakers/yin-yao.jpg",
-    "talk": "The regulation of IgE production",
-    "bio": [
-      "Dr Yin Yao is Professor and Deputy Director of the Department of Otolaryngology–Head and Neck Surgery at Tongji Hospital, Tongji Medical College, Huazhong University of Science and Technology. He completed his PhD through a joint program between Huazhong University of Science and Technology and the Australian National University, followed by postdoctoral training at the University of Queensland.",
-      "His research focuses on the pathogenesis and precision management of allergic rhinitis and chronic rhinosinusitis. He has published over 30 SCI papers as corresponding or first author in journals including Nature, Nature Immunology, Allergy, and Journal of Allergy and Clinical Immunology."
-    ]
-  },
-  {
-    "id": "zheng-liu",
-    "name": "Prof Zheng Liu",
-    "role": "FAAAAI",
-    "affil": "Zhongnan Hospital, Wuhan University",
-    "theme": "immunity",
-    "photo": "images/speakers/zheng-liu.jpg",
-    "talk": "Local IgE production in nasal polyps",
-    "bio": [
-      "Dr Zheng Liu is a Professor in the Department of Otorhinolaryngology–Head and Neck Surgery at Zhongnan Hospital, Wuhan University. He also serves as Vice President of the Chinese Society of Allergy and Vice President of the Otolaryngology Branch of the Chinese Medical Doctor Association.",
-      "His research focuses on the basic and translational investigation of sinusitis and rhinitis, with particular emphasis on the endotypes and immunopathogenesis of chronic rhinosinusitis and allergic rhinitis. His group was the first to demonstrate that more than half of Chinese patients with chronic rhinosinusitis with nasal polyps exhibit a non-eosinophilic inflammatory profile — a feature distinctly different from that seen in Caucasian populations.",
-      "His work has revealed the importance of T- and B-cell subsets in regulating local and systemic IgE production, and has contributed to endotype-guided therapeutic strategies. He has published over 120 papers as corresponding author in journals including Nature Immunology, Nature Communications, the Journal of Allergy and Clinical Immunology, and Allergy, and has received the National Science Fund for Distinguished Young Scholars."
-    ]
-  },
-  {
-    "id": "lai-guan-ng",
-    "name": "Prof Lai Guan Ng",
-    "role": "New Cornerstone Investigator",
-    "affil": "Westlake University",
-    "theme": "immunity",
-    "photo": "images/speakers/lai-guan-ng.jpg",
-    "talk": "Neutrophils: One-Trick Leukocytes?",
-    "bio": [
-      "Prof Lai Guan Ng conducted his PhD at the Garvan Institute of Medical Research in Sydney. After postdoctoral training, he joined the Singapore Immunology Network (SIgN) in 2009 and, over the next 13 years, established himself as a leader in myeloid cell biology, focusing on myeloid cell ontogeny, cellular behaviour and tissue adaptation.",
-      "In 2023 he became a Senior Investigator at the Shanghai Immune Therapy Institute, Director of the Center for Systems Immunology and a Professor at Shanghai Jiao Tong University. He has since relocated to the School of Medicine at Westlake University, Hangzhou.",
-      "He has published in Science, Nature, Science Immunology, Immunity, Journal of Experimental Medicine, Science Advances, Advanced Materials and Nature Protocols. He has been listed as a Clarivate Highly Cited Researcher for six consecutive years (2020–2025) and was selected as a New Cornerstone Investigator."
-    ]
+    ],
+    "surname": "Han",
+    "given": "Sifei"
   },
   {
     "id": "xiaoyu-hu",
@@ -791,20 +678,258 @@ const SPEAKERS = [
       "Xiaoyu Hu received her Bachelor of Medicine degree from Peking University and her Ph.D. in immunology from Cornell University. She is currently a Professor and Vice Dean at Westlake University School of Medicine. Her research focuses on the physiological and pathological functions of tissue-resident myeloid cells, particularly macrophages and mast cells.",
       "She is the recipient of the Christina Fleischmann Award to Young Women Investigators from the International Cytokine & Interferon Society and a Newton Advanced Fellowship from the U.K. Royal Society. She was listed among the “50 scientists that inspire” during the Cell Press 50th anniversary event in 2024 and was one of five female immunologists featured by Nature Immunology.",
       "She holds editorial positions with Immunity, Trends in Immunology, Science Advances and Mucosal Immunology, and has been invited to write for Annual Review of Immunology and Nature Reviews Immunology, including as a plenary speaker at the International Congress of Immunology."
-    ]
+    ],
+    "surname": "Hu",
+    "given": "Xiaoyu"
   },
   {
-    "id": "xingming-zhao",
-    "name": "Prof Xing-Ming Zhao",
-    "role": "Fellow, China Association of Artificial Intelligence; Fellow of IET",
-    "affil": "College of Biomedical Engineering, Fudan University",
-    "theme": "ai",
-    "photo": "images/speakers/xingming-zhao.jpg",
+    "id": "jian-li",
+    "name": "Prof Jian Li",
+    "surname": "Li",
+    "role": "FAA, FAHMS, FAAM",
+    "affil": "Monash University",
+    "theme": "infection",
+    "photo": "images/speakers/jian-li.jpg",
     "talk": "",
     "bio": [
-      "Professor Xing-Ming Zhao is a distinguished professor and Vice Dean of the College of Biomedical Engineering, Fudan University. He received his PhD from the University of Science and Technology of China. He is President of the Shanghai Society for Bioinformatics and Vice President of ISCB-China.",
-      "He focuses on interdisciplinary research between biomedicine and artificial intelligence, and has published more than 180 papers in peer-reviewed journals, including Nature and Cell. He is a Fellow of the China Association of Artificial Intelligence and a Fellow of IET, a senior member of IEEE, Co-Chair of the IEEE SMC Technical Committee on Systems Biology, and Vice-Chair of ACM SIGBIO China. He also serves as lead guest editor and editorial board member of journals including Science Bulletin, Genome Biology, IEEE TCSS, IEEE/ACM TCBB, Neurocomputing, Journal of Theoretical Biology and IET Systems Biology."
-    ]
+      "Vice-Chancellor’s Distinguished Professor Jian Li (PhD 2002) is an elected Fellow of the Australian Academy of Science, the Australian Academy of Health and Medical Sciences, and the American Academy of Microbiology. He heads the Laboratory of Antimicrobial Systems Pharmacology at the Biomedicine Discovery Institute, Monash University.",
+      "Dr Li has an internationally recognised track record in antimicrobial pharmacology and drug discovery. The majority of modern polymyxin pharmacology data were reported by his group, which led to the first scientifically based dosing recommendations for colistin and have improved clinical practice worldwide. His group has developed a novel lipopeptide drug, Soralimixin (BRII-693 [QPX9003]), against Gram-negative ‘superbugs’ from concept to clinical trials.",
+      "Dr Li is President of the International Society of Anti-Infective Pharmacology (ISAP) and Editor-in-Chief of the International Journal of Antimicrobial Agents."
+    ],
+    "given": "Jian"
+  },
+  {
+    "id": "shengying-li",
+    "name": "Prof Shengying Li",
+    "role": "",
+    "affil": "Shandong University",
+    "theme": "infection",
+    "photo": "images/speakers/shengying-li.jpg",
+    "talk": "",
+    "bio": [
+      "Shengying Li is a Professor at the State Key Laboratory of Microbial Technology, Microbial Technology Institute, Shandong University. He obtained his bachelor’s degree in Biology and master’s degree in Microbiology from the School of Life Sciences, Xiamen University, in 2000 and 2003, and earned his Ph.D. in Medicinal Chemistry at the University of Michigan, Ann Arbor, in 2009.",
+      "From 2010–2012 he conducted postdoctoral research in Prof. David H. Sherman’s laboratory at the Life Sciences Institute, University of Michigan. From 2012–2018 he served as full professor and founding director of the Shandong Provincial Key Laboratory of Synthetic Biology at the Qingdao Institute of Bioenergy and Bioprocess Technology, Chinese Academy of Sciences. He joined Shandong University in 2018.",
+      "His major research interests include natural product biosynthesis, cytochrome P450 enzymes, and plastic biodegradation. He has published more than 160 peer-reviewed papers in Nature, Nat. Synth., Nat. Catal., Nat. Commun., PNAS, JACS, Angew. Chem. and other journals. He received the Young Chemical Biologist Award of the International Chemical Biology Society in 2019, and serves as Executive Editor for Engineering Microbiology and on several other editorial boards."
+    ],
+    "surname": "Li",
+    "given": "Shengying"
+  },
+  {
+    "id": "jue-liu",
+    "name": "Prof Jue Liu",
+    "surname": "Liu",
+    "role": "Deputy Director, Department of Epidemiology and Biostatistics",
+    "affil": "Peking University",
+    "theme": "epi",
+    "photo": "images/speakers/jue-liu.jpg",
+    "talk": "",
+    "bio": [
+      "Prof Jue Liu is Deputy Director of the Department of Epidemiology and Biostatistics at the School of Public Health, Peking University. Her research focuses on the epidemiology of infectious diseases. She is the founder of the Global Big Data Platform for Major Infectious Disease Prevention, Control, and Management (BIG-MID).",
+      "She has led more than 30 projects funded by the National Natural Science Foundation, the Ministry of Science and Technology of China, and the National Health Commission of China, and has published more than 200 peer-reviewed papers as corresponding author in journals including The Lancet, BMJ and Nature Medicine. She has served as a GBD Lead Cooperator, a member of the expert panel on infectious disease prevention and control for the National Health Commission and the National Administration of Disease Prevention and Control of China, and on the Expert Advisory Committee of the Chinese Delegation to the World Health Assembly and the Executive Committee of the World Health Organization."
+    ],
+    "given": "Jue"
+  },
+  {
+    "id": "qian-liu",
+    "name": "Prof Qian Liu",
+    "surname": "Liu",
+    "role": "National Science Fund for Distinguished Young Scholars",
+    "affil": "Chinese Academy of Sciences",
+    "theme": "epi",
+    "photo": "images/speakers/qian-liu.jpg",
+    "talk": "",
+    "bio": [
+      "Qian Liu is a Professor at the Research Center for Eco-Environmental Sciences, Chinese Academy of Sciences (RCEES, CAS). He obtained his B.S. in 2004 and Ph.D. in 2009 from Hunan University, followed by postdoctoral training at RCEES, CAS (2010–2012) and Trent University (2013–2014).",
+      "He has published more than 230 papers in SCI-indexed journals. He is a recipient of the National Science Fund for Distinguished Young Scholars (Continuation Funding), and has won the XPLORER Prize, the Second Prize of the State Natural Science Award, the CAIA Award Special Award, and MIT Technology Review Innovators Under 35 China. He serves as Executive Editor for Environment & Health and Associate Editor for Environmental Science: Processes & Impacts. His research interests include environmental analytical chemistry, exposomics, and assessment of environmental health risks."
+    ],
+    "given": "Qian"
+  },
+  {
+    "id": "zheng-liu",
+    "name": "Prof Zheng Liu",
+    "role": "FAAAAI",
+    "affil": "Zhongnan Hospital, Wuhan University",
+    "theme": "immunity",
+    "photo": "images/speakers/zheng-liu.jpg",
+    "talk": "Local IgE production in nasal polyps",
+    "bio": [
+      "Dr Zheng Liu is a Professor in the Department of Otorhinolaryngology–Head and Neck Surgery at Zhongnan Hospital, Wuhan University. He also serves as Vice President of the Chinese Society of Allergy and Vice President of the Otolaryngology Branch of the Chinese Medical Doctor Association.",
+      "His research focuses on the basic and translational investigation of sinusitis and rhinitis, with particular emphasis on the endotypes and immunopathogenesis of chronic rhinosinusitis and allergic rhinitis. His group was the first to demonstrate that more than half of Chinese patients with chronic rhinosinusitis with nasal polyps exhibit a non-eosinophilic inflammatory profile — a feature distinctly different from that seen in Caucasian populations.",
+      "His work has revealed the importance of T- and B-cell subsets in regulating local and systemic IgE production, and has contributed to endotype-guided therapeutic strategies. He has published over 120 papers as corresponding author in journals including Nature Immunology, Nature Communications, the Journal of Allergy and Clinical Immunology, and Allergy, and has received the National Science Fund for Distinguished Young Scholars."
+    ],
+    "surname": "Liu",
+    "given": "Zheng"
+  },
+  {
+    "id": "lai-guan-ng",
+    "name": "Prof Lai Guan Ng",
+    "role": "New Cornerstone Investigator",
+    "affil": "Westlake University",
+    "theme": "immunity",
+    "photo": "images/speakers/lai-guan-ng.jpg",
+    "talk": "Neutrophils: One-Trick Leukocytes?",
+    "bio": [
+      "Prof Lai Guan Ng conducted his PhD at the Garvan Institute of Medical Research in Sydney. After postdoctoral training, he joined the Singapore Immunology Network (SIgN) in 2009 and, over the next 13 years, established himself as a leader in myeloid cell biology, focusing on myeloid cell ontogeny, cellular behaviour and tissue adaptation.",
+      "In 2023 he became a Senior Investigator at the Shanghai Immune Therapy Institute, Director of the Center for Systems Immunology and a Professor at Shanghai Jiao Tong University. He has since relocated to the School of Medicine at Westlake University, Hangzhou.",
+      "He has published in Science, Nature, Science Immunology, Immunity, Journal of Experimental Medicine, Science Advances, Advanced Materials and Nature Protocols. He has been listed as a Clarivate Highly Cited Researcher for six consecutive years (2020–2025) and was selected as a New Cornerstone Investigator."
+    ],
+    "surname": "Ng",
+    "given": "Lai Guan"
+  },
+  {
+    "id": "an-pan",
+    "name": "Prof An Pan",
+    "surname": "Pan",
+    "role": "Highly Cited Researcher",
+    "affil": "Huazhong University of Science and Technology",
+    "theme": "epi",
+    "photo": "images/speakers/an-pan.jpg",
+    "talk": "",
+    "bio": [
+      "Dr An Pan is a professor at the School of Public Health, Tongji Medical College, Huazhong University of Science and Technology. His research interests include chronic disease epidemiology, particularly obesity and diabetes, and healthy and sustainable food-system transformation.",
+      "He has published over 400 papers with more than 40,000 citations and an H-index of 98, and has been named a Highly Cited Researcher for eight consecutive years. He serves as associate editor for the American Journal of Clinical Nutrition, International Journal of Epidemiology, Biomedical and Environmental Sciences and Innovation Nutrition. He is vice chair of the Nutritional Epidemiology Council of the Chinese Nutrition Society and a Standing Committee Member of the Epidemiology Council of the Chinese Preventive Medicine Association. He was a commissioner for EAT-Lancet 2.0 and Lancet Commissions on obesity, and lead author of the Lancet Obesity in China Series."
+    ],
+    "given": "An"
+  },
+  {
+    "id": "anton-peleg",
+    "name": "Prof Anton Peleg",
+    "surname": "Peleg",
+    "role": "FAHMS",
+    "affil": "Monash University / The Alfred",
+    "theme": "infection",
+    "photo": "images/speakers/anton-peleg.jpg",
+    "talk": "",
+    "bio": [
+      "Anton Peleg is a Professor of Infectious Diseases and Microbiology and Director of Infectious Diseases at The Alfred and Monash University. He is Director of the Centre to Impact Antimicrobial Resistance (AMR), Theme Leader for Infection and Immunity at the Monash Academic Health Research and Translational Centre, and a Fellow of the Australian Academy of Health and Medical Sciences.",
+      "After completing infectious diseases training in Australia in 2005, he spent four years in the US at Harvard-affiliated hospitals, including Beth Israel Deaconess Medical Center and Massachusetts General Hospital. He holds a Master of Public Health from Harvard and a PhD in Infectious Diseases and Microbiology focused on AMR and microbial genomics, returning to Australia as a clinician-scientist in 2010.",
+      "His research spans fundamental, translational and clinical work, including hospital-acquired infections, AMR, bacteriophage therapy, bacterial genomics, AI in healthcare, microbial pathogenesis and infections in immunocompromised hosts. He leads AMR projects across hospital, community, aged-care and regional settings, and remains an active clinician in transplant infectious diseases and hospital-acquired infections."
+    ],
+    "given": "Anton"
+  },
+  {
+    "id": "helena-qin",
+    "name": "A/Prof Chengxue Helena Qin",
+    "role": "Australian Research Council Future Leader",
+    "affil": "Monash Institute of Pharmaceutical Sciences, Monash University",
+    "theme": "immunity",
+    "photo": "images/speakers/helena-qin.jpg",
+    "talk": "Beyond Inflammation Suppression: Harnessing Resolution and Repair in Cardiometabolic Disease",
+    "bio": [
+      "A/Prof Chengxue Helena Qin is a translational pharmacologist whose research sits at the intersection of inflammation resolution and cardiometabolic disease. She focuses on how immune and inflammatory pathways can be harnessed to promote the active resolution of inflammation and tissue repair, rather than simply suppressing inflammation.",
+      "Currently an Australian Research Council Future Leader and previously a National Heart Foundation Future Fellow, she completed her PhD at the University of Melbourne, followed by postdoctoral training at the Baker Heart and Diabetes Institute. Since establishing her independent group at the Monash Institute of Pharmaceutical Sciences, she has built an internationally recognised program on pro-resolving mediators, immune–vascular interactions and GPCR signalling.",
+      "She has authored more than 70 peer-reviewed publications in journals including Circulation Research, Nature Communications, Cardiovascular Research, Circulation and Science, and has received more than 20 national and international awards. She currently serves on the IUPHAR Cardiovascular Committee and previously served on the Board of Directors of ASCEPT."
+    ],
+    "surname": "Qin",
+    "given": "Helena"
+  },
+  {
+    "id": "jingfu-qiu",
+    "name": "Prof Jingfu Qiu",
+    "surname": "Qiu",
+    "role": "Vice President",
+    "affil": "Chongqing Medical University",
+    "theme": "epi",
+    "photo": "images/speakers/jingfu-qiu.jpg",
+    "talk": "",
+    "bio": [
+      "Jingfu Qiu, M.D., is a Professor (Grade II), doctoral supervisor and Vice President of Chongqing Medical University. He is a Chongqing Municipal Academic and Technical Leader in Public Health and Preventive Medicine and a Leading Talent in Innovation and Entrepreneurship under the Chongqing Talent Program. His main research interests include preventive medicine education and environmental microbiology and health.",
+      "He has led multiple national and provincial research projects and published more than 100 papers, including over 30 SCI papers as corresponding author in journals such as Nature Medicine and Cell Metabolism. He is Editor-in-Chief of Sanitary Microbiology, Vice Chair of the Health Laboratory Science Branch of the Chinese Preventive Medicine Association, and Vice President of the Chongqing Preventive Medicine Association."
+    ],
+    "given": "Jingfu"
+  },
+  {
+    "id": "jieming-qu",
+    "name": "Prof Jieming Qu",
+    "role": "Fellow, American Academy of Microbiology",
+    "affil": "Ruijin Hospital, Shanghai Jiao Tong University School of Medicine",
+    "theme": "infection",
+    "photo": "images/speakers/jieming-qu.jpg",
+    "talk": "",
+    "bio": [
+      "Jieming Qu is Professor of Pulmonary and Critical Care Medicine at Ruijin Hospital, Shanghai Jiao Tong University School of Medicine. He is a Fellow of the American Academy of Microbiology, the 11th President of the Chinese Thoracic Society, and President-elect of the Chest Physicians Society of the Chinese Medical Doctor Association.",
+      "He serves as Director of the Institute of Respiratory Diseases and the Shanghai Key Laboratory of Severe Respiratory Infections. His research focuses on respiratory infectious diseases, pulmonary and critical care medicine, severe respiratory infections, and translational clinical research.",
+      "He has led numerous national research programmes, including two National Natural Science Foundation of China Key Projects and a National Key Research and Development Program. Professor Qu has received multiple prestigious awards, including the Shanghai Science and Technology Progress First Prize and the Asia-Pacific Clinical Medicine Award. He has published more than 160 SCI-indexed papers, including articles in Cell, The Lancet, and The BMJ."
+    ],
+    "surname": "Qu",
+    "given": "Jieming"
+  },
+  {
+    "id": "jamie-rossjohn",
+    "name": "Prof Jamie Rossjohn",
+    "role": "FAA, FRS",
+    "affil": "Monash University",
+    "theme": "immunity",
+    "photo": "images/speakers/jamie-rossjohn.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Jamie Rossjohn FAA FRS is principally known for his contributions to the understanding of disease and the vertebrate host response, both from the aspect of protective and deleterious immunity. He has used structural biology to understand how T cell receptors recognise peptides, lipids and metabolites.",
+      "He has unearthed structural mechanisms of Major Histocompatibility Complex (MHC) polymorphism impacting on viral immunity, drug and food hypersensitivities and T cell mediated autoimmunity. Rossjohn has pioneered our molecular understanding of how T cells bind lipid-based antigens presented by the CD1 family, and has elucidated the structural basis of how vitamin B metabolites are presented by the MHC class I related protein, MR1 — revealing an entirely new class of antigen for T cells."
+    ],
+    "surname": "Rossjohn",
+    "given": "Jamie"
+  },
+  {
+    "id": "jiangning-song",
+    "name": "Prof Jiangning Song",
+    "surname": "Song",
+    "role": "Director, AI-driven Bioinformatics and Biomedicine Program",
+    "affil": "Monash University",
+    "theme": "ai",
+    "photo": "images/speakers/jiangning-song.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Jiangning Song is a Professor and Director of the AI-driven Bioinformatics and Biomedicine Program at the Monash Biomedicine Discovery Institute, Faculty of Medicine, Nursing and Health Sciences, Monash University. He is also an Honorary Professor at the University of Melbourne and an affiliated member of the Monash AI Institute, the Monash Bioinformatics Platform, and the ARC Centre of Excellence in Advanced Molecular Imaging.",
+      "His research focuses on machine learning, deep learning and multi-modal AI for biomedicine and healthcare, including modelling proteins, DNAs, RNAs and small molecules, and integrating spatial multi-omics, medical imaging and digital health data to support research in cancer, infection and immunity.",
+      "He has published 390 journal papers, with approximately 18,000 citations and an H-index of 72, in journals including Cell, Nature Biotechnology, Nature Methods, The Lancet Oncology, Nature Machine Intelligence and Nature Communications. He is an Associate Editor of IEEE Journal of Biomedical and Health Informatics and BMC Bioinformatics, and has guest-edited a Genome Biology special issue on large language models in genomics."
+    ],
+    "given": "Jiangning"
+  },
+  {
+    "id": "jing-sun",
+    "name": "Prof Jing Sun",
+    "surname": "Sun",
+    "role": "",
+    "affil": "University of Technology Sydney",
+    "theme": "epi",
+    "photo": "images/speakers/jing-sun.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Jing Sun is a Professor at the Data Science Institute, University of Technology Sydney, and Adjunct Distinguished Professor at the Heart Research Institute, University of Sydney. She was previously a professor at the School of Medicine and Dentistry, Griffith University. She is an internationally recognised researcher in clinical medicine, biostatistics and bioinformatics, with work spanning mental disorders, chronic disease and birth defects, and close links with health services, hospitals and Aboriginal Community Controlled Health Services.",
+      "Her PhD and postdoctoral research focused on mental disorders, cognitive functioning and healthcare in infants, children and adolescents. She pioneered an intervention model for young children with depression that has been incorporated into World Health Organization and more than 16 countries’ policy and guideline documents. Over the past 15 years she has led chronic disease prevention and clinical trials in diabetes, heart failure, obsessive-compulsive disorders and sleep disorders in Australia and China.",
+      "She is a member of the accreditation committee of the Statistical Society of Australia and President of the Health and Medicine Society of the International Engineering and Technology Institute. Her career grant funding exceeds A$11.85 million, and she has published over 330 papers with more than 45,000 citations and an H-index of 80. She is listed among the top 2% of scientists by Elsevier and Stanford University."
+    ],
+    "given": "Jing"
+  },
+  {
+    "id": "wei-wang",
+    "name": "Prof Wei Wang",
+    "surname": "Wang",
+    "role": "AM, MAE, FFPH, FRSB, FRSM",
+    "affil": "Edith Cowan University",
+    "theme": "epi",
+    "photo": "images/speakers/wei-wang.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Wei Wang is Professor of Global Health and Glycomics at Edith Cowan University and an overseas adjunct professor at Shantou University Medical College. He previously served as Vice Director-Research of the Peking University–Hong Kong University of Science and Technology Medical Centre in Shenzhen, Vice Dean of the School of Life Science at the University of Chinese Academy of Sciences, and Dean of the School of Public Health and Family Medicine at Capital Medical University.",
+      "He has published over 300 scientific papers in journals including Nature Genetics, Nature Reviews Cancer, NEJM, Science, Human Genetics, Glycobiology, Journal of Proteome Research, The Lancet, Lancet Regional Health and Lancet Healthy Longevity. He holds an MD from China Medical University and a PhD from Oita Medical University, Japan. He is a Fellow of the Faculty of Public Health of the Royal College of Physicians (FFPH), the Royal Society of Biology (FRSB) and the Royal Society of Medicine (FRSM). In 2026 he was appointed a Member of the Order of Australia (AM) and elected a Member of Academia Europaea (MAE)."
+    ],
+    "given": "Wei"
+  },
+  {
+    "id": "yankai-xia",
+    "name": "Prof Yankai Xia",
+    "surname": "Xia",
+    "role": "Vice President",
+    "affil": "Nanjing Medical University",
+    "theme": "epi",
+    "photo": "images/speakers/yankai-xia.jpg",
+    "talk": "",
+    "bio": [
+      "Yankai Xia is Professor and Vice President of Nanjing Medical University. He is a Distinguished Professor of the National Major Talent Project, an NSFC Outstanding Young Scientist, and Chief Scientist of the National Key Research and Development Program.",
+      "He has published more than 310 papers in journals including PNAS, Nature Genetics, Nature Communications, Innovation, Environmental Health Perspectives, Thorax, Environmental Science & Technology, Advanced Science and Journal of Advanced Research, with an H-index of 68. He serves as Chair of the Membership Committee and Vice-Chair of the Asian Chapter of ISES, and as Editor-in-Chief of Technical Terms for Toxicology, as well as Editor-in-Chief and/or Associate Editor for journals including Sustainable Horizons, Environment International and Toxics. His awards include the National Science and Technology Progress Award and the Outstanding Scientific Research Achievement Award from the Ministry of Education."
+    ],
+    "given": "Yankai"
   },
   {
     "id": "junyu-xiao",
@@ -817,7 +942,132 @@ const SPEAKERS = [
     "bio": [
       "Professor Junyu Xiao earned his PhD in biological chemistry from the University of Michigan. After postdoctoral training in Dr Jack Dixon’s laboratory at UCSD, he joined Peking University in 2014.",
       "He and his team focus on the molecular mechanisms underlying immunoglobulins (antibodies), including interactions between different immunoglobulins and their specific receptors and binding partners, as well as the interplay between immunoglobulins and the complement system. As corresponding or co-corresponding author, he has published over 40 papers in leading journals including Nature, Science and Cell."
-    ]
+    ],
+    "surname": "Xiao",
+    "given": "Junyu"
+  },
+  {
+    "id": "shunqing-xu",
+    "name": "Prof Shunqing Xu",
+    "surname": "Xu",
+    "role": "Changjiang Scholar Distinguished Professor",
+    "affil": "Hainan University",
+    "theme": "epi",
+    "photo": "images/speakers/shunqing-xu.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Shunqing Xu is a Changjiang Scholar Distinguished Professor and Dean of the School of Environmental Science and Engineering at Hainan University. He was also selected for China’s National Bai-Qian-Wan Talents Program.",
+      "He has extensive experience in the identification and assessment of environmental health risks, and has led more than 20 national-level research projects, including the 973 and 863 Programs, the National Key Research and Development Program, and Key Programs of the NSFC. He has published more than 310 SCI-indexed articles in journals including The New England Journal of Medicine and titles in The Lancet and Nature portfolios, Environmental Health Perspectives, and Environmental Science & Technology. His research has informed WHO, EU, US and Chinese standards and guidelines related to water, food and soil.",
+      "As the first-ranked contributor, he has received the Second Prize of the National Science and Technology Progress Award and three first prizes at provincial or ministerial level."
+    ],
+    "given": "Shunqing"
+  },
+  {
+    "id": "yin-yao",
+    "name": "Prof Yin Yao",
+    "role": "Deputy Director",
+    "affil": "Tongji Hospital, Huazhong University of Science and Technology",
+    "theme": "immunity",
+    "photo": "images/speakers/yin-yao.jpg",
+    "talk": "The regulation of IgE production",
+    "bio": [
+      "Dr Yin Yao is Professor and Deputy Director of the Department of Otolaryngology–Head and Neck Surgery at Tongji Hospital, Tongji Medical College, Huazhong University of Science and Technology. He completed his PhD through a joint program between Huazhong University of Science and Technology and the Australian National University, followed by postdoctoral training at the University of Queensland.",
+      "His research focuses on the pathogenesis and precision management of allergic rhinitis and chronic rhinosinusitis. He has published over 30 SCI papers as corresponding or first author in journals including Nature, Nature Immunology, Allergy, and Journal of Allergy and Clinical Immunology."
+    ],
+    "surname": "Yao",
+    "given": "Yin"
+  },
+  {
+    "id": "dan-ye",
+    "name": "Prof Dan Ye",
+    "surname": "Ye",
+    "role": "",
+    "affil": "Fudan University",
+    "theme": "infection",
+    "photo": "images/speakers/dan-ye.jpg",
+    "talk": "",
+    "bio": [
+      "Dan Ye completed a Master’s degree in Genetics at Zhejiang University (2002–2005) and a Ph.D. at the Division of Biopharmaceutics, Leiden/Amsterdam Center for Drug Research (LACDR), Leiden University (2005–2008), working with Professors Theo J. C. Van Berkel and Miranda Van Eck on ABC transporters and lipid transfer proteins in macrophage cholesterol homeostasis and atherosclerosis. She then continued as a postdoctoral fellow focusing on ABC transporters in myocardial ischemia.",
+      "In 2011 she joined the Institutes of Biomedical Sciences at Fudan University as an associate professor, shifting her research toward acetylation regulation of metabolism and metabolite-mediated epigenetic control during tumorigenesis. Appointed professor in 2015, she now studies how physiological and pathological conditions change metabolite concentrations to affect gene expression, and how metabolite signalling molecules regulate epigenetic enzymes or GPCR receptors to control cell survival and growth."
+    ],
+    "given": "Dan"
+  },
+  {
+    "id": "di-yu",
+    "name": "Prof Di Yu",
+    "role": "FAHMS",
+    "affil": "The University of Queensland",
+    "theme": "immunity",
+    "photo": "images/speakers/di-yu.jpg",
+    "talk": "From T Cell Biology to Immunotherapy Innovation",
+    "bio": [
+      "Dr Di Yu is the Chair in Paediatric Immunotherapy and inaugural Director of the Ian Frazer Centre of Children's Immunotherapy Research at the University of Queensland. As a Professor of Immunology, he heads the Systems and Translational T-cell Immunology Laboratory.",
+      "He was educated at Wuhan University (BSc) and the Australian National University (PhD), followed by postdoctoral training at the Garvan Institute of Medical Research. Before joining UQ, he held faculty positions at Monash University and ANU. His research focuses on T cell subsets, systems immunology techniques to assess immune status, and novel therapies to regulate T cell functions in autoimmune diseases and cancer.",
+      "Dr Yu has authored over 140 publications in premier journals, including Nature, Nature Immunology, Nature Medicine, Nature Computational Science, Immunity and Science Immunology as a senior author. He is a Fellow of the Australian Academy of Health and Medical Sciences and received the 2023 Jacques Miller Medal from the Australian Academy of Science. He also serves as Vice President of FIMSA and on committees for the International Union of Immunological Societies and the Cytokine Society."
+    ],
+    "surname": "Yu",
+    "given": "Di"
+  },
+  {
+    "id": "xuegong-zhang",
+    "name": "Prof Xuegong Zhang",
+    "role": "ISCB Fellow, IEEE Fellow, FAAIA",
+    "affil": "Tsinghua University",
+    "theme": "ai",
+    "photo": "images/speakers/xuegong-zhang.jpg",
+    "talk": "",
+    "bio": [
+      "Xuegong Zhang is Professor of Pattern Recognition and Bioinformatics at Tsinghua University, Department of Automation, Adjunct Professor of the School of Life Sciences and School of Medicine, and a member of the Faculty Committees of the Department of Statistics and Data Science and of the Vanke School of Public Health.",
+      "He received his BS degree in 1989 and Ph.D. degree in 1994, both from Tsinghua University, after which he joined the Tsinghua faculty. He was a visiting scientist at the Harvard School of Public Health in 2001–2002 and 2006, and a visiting scholar at the University of Southern California in 2007. He was elected as ISCB Fellow and CAAI Fellow in 2020.",
+      "He is the current Vice President of ISCB, the founding chair of ISCB-China, and the co-Editor-in-Chief of the journal Quantitative Biology. His research interests include machine learning, AI foundation models, the human cell atlas, intelligent precision medicine, AI virtual cells and digital life systems."
+    ],
+    "surname": "Zhang",
+    "given": "Xuegong"
+  },
+  {
+    "id": "youming-zhang",
+    "name": "Prof Youming Zhang",
+    "role": "CAE Foreign Member, acatech Member, MAE",
+    "affil": "Shandong University",
+    "theme": "infection",
+    "photo": "images/speakers/youming-zhang.jpg",
+    "talk": "",
+    "bio": [
+      "Youming Zhang is a foreign member of the Chinese Academy of Engineering, and a member of Academia Europaea and acatech (National Academy of Science and Engineering, Germany). He received his PhD at Ruprecht-Karls-Universität Heidelberg in 1994.",
+      "After postdoctoral research at Heidelberg University and the European Molecular Biology Laboratory (EMBL), he founded Gene Bridges GmbH (Germany) in 2000 as Co-founder and Chief Scientific Officer. Since 2013, he has served as Director of the State Key Laboratory of Microbial Technology, Shandong University.",
+      "His research is dedicated to the invention of Red/ET recombineering and its application in microbial natural products, humanized animal models, and tumour-targeting bacteria. He has published over 280 SCI-indexed papers, with more than 17,200 citations and an H-index of 66."
+    ],
+    "surname": "Zhang",
+    "given": "Youming"
+  },
+  {
+    "id": "xingming-zhao",
+    "name": "Prof Xing-Ming Zhao",
+    "role": "Fellow, China Association of Artificial Intelligence; Fellow of IET",
+    "affil": "College of Biomedical Engineering, Fudan University",
+    "theme": "ai",
+    "photo": "images/speakers/xingming-zhao.jpg",
+    "talk": "",
+    "bio": [
+      "Professor Xing-Ming Zhao is a distinguished professor and Vice Dean of the College of Biomedical Engineering, Fudan University. He received his PhD from the University of Science and Technology of China. He is President of the Shanghai Society for Bioinformatics and Vice President of ISCB-China.",
+      "He focuses on interdisciplinary research between biomedicine and artificial intelligence, and has published more than 180 papers in peer-reviewed journals, including Nature and Cell. He is a Fellow of the China Association of Artificial Intelligence and a Fellow of IET, a senior member of IEEE, Co-Chair of the IEEE SMC Technical Committee on Systems Biology, and Vice-Chair of ACM SIGBIO China. He also serves as lead guest editor and editorial board member of journals including Science Bulletin, Genome Biology, IEEE TCSS, IEEE/ACM TCBB, Neurocomputing, Journal of Theoretical Biology and IET Systems Biology."
+    ],
+    "surname": "Zhao",
+    "given": "Xing-Ming"
+  },
+  {
+    "id": "zhiyong-zong",
+    "name": "Prof Zhiyong Zong",
+    "role": "",
+    "affil": "West China Hospital, Sichuan University",
+    "theme": "infection",
+    "photo": "images/speakers/zhiyong-zong.jpg",
+    "talk": "",
+    "bio": [
+      "Prof Zong is a senior physician-scientist in infectious diseases and leads the infectious diseases ward at West China Hospital, Sichuan University, Chengdu, China. His main research interests are carbapenem-resistant Enterobacteriaceae, non-tuberculous mycobacteria, bacteriophages, and bacterial genomes. He has authored more than 260 peer-reviewed papers in journals including BMJ, Nature Communications, Lancet Microbe, and Clinical Infectious Diseases."
+    ],
+    "surname": "Zong",
+    "given": "Zhiyong"
   }
 ];
 const speakerGrid = document.getElementById('speakerGrid');
@@ -831,8 +1081,11 @@ function esc(s){
   return String(s||'').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 }
 
+function speakerSort(a, b){
+  return a.surname.localeCompare(b.surname) || a.given.localeCompare(b.given);
+}
 function renderSpeakers(){
-  const list = SPEAKERS.filter(s => speakerFilter === 'all' || s.theme === speakerFilter);
+  const list = SPEAKERS.filter(s => speakerFilter === 'all' || s.theme === speakerFilter).slice().sort(speakerSort);
   speakerGrid.innerHTML = list.map(s => `
     <button class="speaker-card" type="button" data-id="${esc(s.id)}" aria-label="${esc(s.name)}">
       <div class="speaker-photo"><img src="${esc(s.photo)}" alt="${esc(s.name)}" loading="lazy"></div>
