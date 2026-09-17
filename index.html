@@ -158,7 +158,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 .m-affil{font-size:.82rem;color:var(--c-muted);margin-top:.15rem}
 /* SPONSORS */
 .sponsor-section{background:var(--c-white)}
-.sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.5rem}
+.sponsor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:2.5rem}
 .sponsor-card{min-height:150px;border-radius:var(--radius-sm);background:var(--c-white);border:1px solid var(--c-border);display:flex;align-items:center;justify-content:center;padding:2rem;overflow:hidden;transition:all .25s}
 .sponsor-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(15,43,91,.06);border-color:var(--c-blue)}
 .sponsor-card img{width:100%;max-width:360px;max-height:100px;object-fit:contain}
@@ -203,6 +203,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 @media(max-width:720px){
 .spk-modal{grid-template-columns:1fr}
 .spk-modal-photo{height:220px;min-height:0}
+.sponsor-grid{grid-template-columns:1fr}
 }
 /* VISA */
 .visa-section{background:linear-gradient(180deg,var(--c-bg) 0%,#eef2ff 100%)}
@@ -536,7 +537,8 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
   </div>
   <div class="sponsor-grid" data-anim>
     <div class="sponsor-card"><img src="images/nanoinsights-logo.jpg" alt="NanoInsights logo" loading="lazy"></div>
-    <div class="sponsor-card"><img src="images/ceatdi-logo.jpg" alt="CEATDI &amp; Monash Suzhou logo" loading="lazy"></div>
+    <div class="sponsor-card"><img src="images/monash-suzhou-logo.jpg" alt="Monash University Suzhou China logo" loading="lazy"></div>
+    <div class="sponsor-card"><img src="images/ceatdi-logo.jpg" alt="CEATDI logo" loading="lazy"></div>
   </div>
 </div>
 </section>
