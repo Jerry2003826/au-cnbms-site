@@ -34,16 +34,17 @@ html[lang="zh"] body{font-family:'Noto Sans SC','DM Sans',system-ui,sans-serif}
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s,box-shadow .35s,backdrop-filter .35s}
 .nav.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(180%);box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-.nav-logo{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--c-white);letter-spacing:-.02em;transition:color .35s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;width:min(1440px,96vw);margin-inline:auto;gap:1.25rem}
+.nav-logo{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--c-white);letter-spacing:-.02em;transition:color .35s;flex-shrink:0;white-space:nowrap}
 .nav.scrolled .nav-logo{color:var(--c-navy)}
-.nav-links{display:flex;gap:1.6rem;align-items:center;list-style:none}
-.nav-links a{font-size:.875rem;font-weight:500;color:rgba(255,255,255,.85);transition:color .25s;letter-spacing:.01em}
+.nav-links{display:flex;gap:.95rem;align-items:center;list-style:none;flex-wrap:nowrap}
+.nav-links li{flex-shrink:0}
+.nav-links a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.85);transition:color .25s;letter-spacing:.01em;white-space:nowrap}
 .nav.scrolled .nav-links a{color:var(--c-text)}
 .nav-links a:hover{color:var(--c-accent)}
-.nav-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.3rem;background:var(--c-blue);color:var(--c-white)!important;border-radius:100px;font-weight:600;font-size:.85rem;transition:transform .2s,box-shadow .2s}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.15rem;background:var(--c-blue);color:var(--c-white)!important;border-radius:100px;font-weight:600;font-size:.82rem;transition:transform .2s,box-shadow .2s;white-space:nowrap}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,109,255,.35)}
-.lang-btn{padding:.4rem .8rem;border-radius:100px;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:rgba(255,255,255,.85);font-size:.78rem;font-weight:600;cursor:pointer;transition:all .25s}
+.lang-btn{padding:.4rem .8rem;border-radius:100px;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:rgba(255,255,255,.85);font-size:.78rem;font-weight:600;cursor:pointer;transition:all .25s;white-space:nowrap;flex-shrink:0}
 .nav.scrolled .lang-btn{border-color:var(--c-border);color:var(--c-text)}
 .lang-btn:hover{background:rgba(255,255,255,.1)}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
@@ -226,19 +227,21 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 [data-anim]{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 [data-anim].visible{opacity:1;transform:translateY(0)}
 /* RESPONSIVE */
-@media(max-width:900px){
-.about-grid,.topic-cards{grid-template-columns:1fr}
-.nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:center;background:var(--c-white);padding:1.25rem 1.5rem;gap:.35rem;box-shadow:0 8px 30px rgba(0,0,0,.1);border-radius:0 0 var(--radius) var(--radius);max-height:calc(100vh - 72px);overflow-y:auto}
+@media(max-width:1240px){
+.nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:center;flex-wrap:nowrap;background:var(--c-white);padding:1.25rem 1.5rem;gap:.35rem;box-shadow:0 8px 30px rgba(0,0,0,.1);border-radius:0 0 var(--radius) var(--radius);max-height:calc(100vh - 72px);overflow-y:auto}
 .nav-links.open{display:flex}
 .nav-links li{width:100%;display:flex;justify-content:center}
-.nav-links a{color:var(--c-text)!important;display:inline-flex;justify-content:center;padding:.45rem .75rem;border-bottom:0}
+.nav-links a{color:var(--c-text)!important;display:inline-flex;justify-content:center;padding:.45rem .75rem;border-bottom:0;font-size:.875rem}
 .nav-links .nav-cta{width:auto;min-width:max-content;margin-top:.35rem;padding:.65rem 1.35rem;color:var(--c-white)!important;border-radius:100px}
 .nav-toggle{display:block}
+.lang-btn{border-color:var(--c-border);color:var(--c-text)}
+}
+@media(max-width:900px){
+.about-grid,.topic-cards{grid-template-columns:1fr}
 .hotel-grid,.com-grid,.speaker-grid{grid-template-columns:1fr}
 .tl-item{flex-direction:column;gap:.3rem}
 .tl-time{width:auto}
 .topic-card.full-width{grid-column:auto}
-.lang-btn{border-color:var(--c-border);color:var(--c-text)}
 }
 </style>
 </head>
@@ -246,7 +249,7 @@ html[lang="zh"] .section-title{font-family:'Noto Sans SC',sans-serif;font-size:c
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-<div class="container nav-inner">
+<div class="nav-inner">
   <a href="#" class="nav-logo"><span class="en">ACBS 2026</span><span class="zh">中澳生物医学峰会</span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#home"><span class="en">Home</span><span class="zh">首页</span></a></li>
